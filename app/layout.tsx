@@ -1,0 +1,58 @@
+import type { Metadata } from "next";
+
+import {
+  Inter,
+  Inter_Tight,
+} from "next/font/google";
+
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
+
+import "./globals.css";
+import "./lawxygen-v3.css";
+
+const bodyFont = Inter({
+  subsets: ["latin"],
+  variable: "--v3-body",
+  display: "swap",
+});
+
+const displayFont =
+  Inter_Tight({
+    subsets: ["latin"],
+    variable: "--v3-display",
+    display: "swap",
+  });
+
+export const metadata: Metadata = {
+  title:
+    "LAWXYGEN | Legal, Tax & Business Services",
+
+  description:
+    "Business registration, tax, compliance, intellectual property, documentation and professional consultation services.",
+
+  icons: {
+    icon: "/lawxygen-logo.png",
+    shortcut:
+      "/lawxygen-logo.png",
+    apple:
+      "/lawxygen-logo.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${bodyFont.variable} ${displayFont.variable}`}
+    >
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
+    </html>
+  );
+}

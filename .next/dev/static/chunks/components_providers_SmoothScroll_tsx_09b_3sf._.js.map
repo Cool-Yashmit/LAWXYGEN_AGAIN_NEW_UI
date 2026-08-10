@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/LAWXYGEN_AGAIN_NEW_UI/components/providers/SmoothScroll.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { ReactLenis } from \"lenis/react\";\r\nimport \"lenis/dist/lenis.css\";\r\n\r\nexport function SmoothScroll() {\r\n  return (\r\n    <ReactLenis\r\n      root\r\n      options={{\r\n        autoRaf: true,\r\n        lerp: 0.075,\r\n        smoothWheel: true,\r\n        anchors: true,\r\n        respectReducedMotion: true,\r\n      }}\r\n    />\r\n  );\r\n}"],"names":["SmoothScroll","root","options","autoRaf","lerp","smoothWheel","anchors","respectReducedMotion"],"mappings":";;;;;AAEA;AAFA;;;;AAKO,SAASA;IACd,qBACE,6LAAC,iKAAU;QACTC,IAAI;QACJC,SAAS;YACPC,SAAS;YACTC,MAAM;YACNC,aAAa;YACbC,SAAS;YACTC,sBAAsB;QACxB;;;;;;AAGN;KAbgBP"}}]
+}
