@@ -9,6 +9,7 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 
 import "./globals.css";
 import "./lawxygen-v3.css";
+import "./navbar-final.css";
 
 const bodyFont = Inter({
   subsets: ["latin"],
@@ -31,11 +32,9 @@ export const metadata: Metadata = {
     "Business registration, tax, compliance, intellectual property, documentation and professional consultation services.",
 
   icons: {
-    icon: "/lawxygen-logo.png",
-    shortcut:
-      "/lawxygen-logo.png",
-    apple:
-      "/lawxygen-logo.png",
+    icon: "/lawxygen-favicon.png",
+    shortcut: "/lawxygen-favicon.png",
+    apple: "/lawxygen-favicon.png",
   },
 };
 

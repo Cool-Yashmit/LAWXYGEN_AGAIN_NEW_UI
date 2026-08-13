@@ -1,169 +1,200 @@
 "use client";
 
 import Image from "next/image";
-
-import {
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
-
+import { useCallback, useEffect, useState } from "react";
 import { ServiceMegaMenu } from "./ServiceMegaMenu";
 
+type MobileIconName =
+  | "services"
+  | "business"
+  | "compliance"
+  | "brand"
+  | "lawyer"
+  | "expert"
+  | "ai";
+
+function MobileIcon({ name }: { name: MobileIconName }) {
+  const common = {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+
+  if (name === "services") {
+    return (
+      <svg {...common}>
+        <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+      </svg>
+    );
+  }
+
+  if (name === "business") {
+    return (
+      <svg {...common}>
+        <path d="M4 20V8l8-4 8 4v12" />
+        <path d="M8 20v-6h8v6M8 10h.01M12 10h.01M16 10h.01" />
+      </svg>
+    );
+  }
+
+  if (name === "compliance") {
+    return (
+      <svg {...common}>
+        <path d="M12 3l7 3v5c0 4.7-2.8 8.4-7 10-4.2-1.6-7-5.3-7-10V6l7-3z" />
+        <path d="m9 12 2 2 4-5" />
+      </svg>
+    );
+  }
+
+  if (name === "brand") {
+    return (
+      <svg {...common}>
+        <path d="M12 3l2.2 4.8L19 10l-4.8 2.2L12 17l-2.2-4.8L5 10l4.8-2.2L12 3z" />
+        <path d="M18 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" />
+      </svg>
+    );
+  }
+
+  if (name === "lawyer") {
+    return (
+      <svg {...common}>
+        <path d="M12 4v16M7 7h10M5 7l-3 6h6L5 7zM19 7l-3 6h6l-3-6zM8 20h8" />
+      </svg>
+    );
+  }
+
+  if (name === "expert") {
+    return (
+      <svg {...common}>
+        <circle cx="12" cy="8" r="3" />
+        <path d="M5 21c.5-4 3-6 7-6s6.5 2 7 6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...common}>
+      <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" />
+      <path d="M19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15z" />
+    </svg>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="6" />
+      <path d="m16 16 4 4" />
+    </svg>
+  );
+}
+
 export function Header() {
-  const [servicesOpen, setServicesOpen] =
-    useState(false);
-
-  const [menuOpen, setMenuOpen] =
-    useState(false);
-
-  const [serviceQuery, setServiceQuery] =
-    useState("");
-
-  const [scrolled, setScrolled] =
-    useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [serviceQuery, setServiceQuery] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   const closeServices = useCallback(() => {
     setServicesOpen(false);
   }, []);
 
-  const openServices = useCallback(
-    (query = "") => {
-      setServiceQuery(query);
-      setServicesOpen(true);
-    },
-    []
-  );
+  const openServices = useCallback((query = "") => {
+    setServiceQuery(query);
+    setMobileOpen(false);
+    setServicesOpen(true);
+  }, []);
 
   useEffect(() => {
-    const scroll = () =>
-      setScrolled(window.scrollY > 30);
+    const onScroll = () => setScrolled(window.scrollY > 28);
 
-    const open = (event: Event) => {
-      const custom =
-        event as CustomEvent<{
-          query?: string;
-        }>;
-
-      openServices(
-        custom.detail?.query ?? ""
-      );
+    const onOpenServices = (event: Event) => {
+      const custom = event as CustomEvent<{ query?: string }>;
+      openServices(custom.detail?.query ?? "");
     };
 
-    scroll();
-
-    window.addEventListener(
-      "scroll",
-      scroll,
-      { passive: true }
-    );
-
-    window.addEventListener(
-      "lawxygen:open-services",
-      open
-    );
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("lawxygen:open-services", onOpenServices);
 
     return () => {
-      window.removeEventListener(
-        "scroll",
-        scroll
-      );
-
-      window.removeEventListener(
-        "lawxygen:open-services",
-        open
-      );
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("lawxygen:open-services", onOpenServices);
     };
   }, [openServices]);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("lawx-mobile-nav-open", mobileOpen);
+
+    return () => {
+      document.documentElement.classList.remove("lawx-mobile-nav-open");
+    };
+  }, [mobileOpen]);
+
   return (
     <>
-      <header
-        className={`v3-header ${
-          scrolled ? "scrolled" : ""
-        }`}
-      >
-        <div className="v3-header-inner">
-          <a
-            href="#"
-            className="v3-brand"
-            aria-label="LAWXYGEN"
-          >
+      <header className={`lawx-final-header ${scrolled ? "scrolled" : ""}`}>
+        <div className="lawx-final-nav">
+          <a href="#" className="lawx-final-brand" aria-label="LAWXYGEN home">
             <Image
-              src="/lawxygen-logo.png"
+              src="/lawxygen-logo-clean.png"
               alt="LAWXYGEN"
               width={180}
-              height={100}
+              height={130}
               priority
-              className="v3-brand-image"
+              className="lawx-final-logo"
             />
           </a>
 
-          <nav className="v3-desktop-nav">
-            <button
-              type="button"
-              onClick={() =>
-                openServices()
-              }
-            >
-              Services
-              <span>+</span>
+          <nav className="lawx-final-links" aria-label="Primary navigation">
+            <button type="button" onClick={() => openServices()}>
+              Services <span>+</span>
             </button>
-
-            <a href="#business">
-              Business
-            </a>
-
-            <a href="#compliance">
-              Compliance
-            </a>
-
-            <a href="#experts">
-              Experts
-            </a>
-
-            <a href="#resources">
-              Resources
-            </a>
+            <a href="#business">Business</a>
+            <a href="#compliance">Compliance</a>
+            <a href="#experts">Find a Lawyer</a>
+            <a href="#resources">Resources</a>
           </nav>
 
-          <div className="v3-header-actions">
+          <div className="lawx-final-actions">
             <button
               type="button"
-              className="v3-nav-search"
-              onClick={() =>
-                openServices()
-              }
+              className="lawx-final-search"
+              onClick={() => openServices()}
               aria-label="Search services"
             >
-              ⌕
+              <SearchIcon />
             </button>
 
-            <a
-              href="#login"
-              className="v3-login"
-            >
+            <button type="button" className="lawx-final-login">
               Login
-            </a>
+            </button>
 
-            <a
-              href="#contact"
-              className="v3-consult"
-            >
-              Consult
-              <span>↗</span>
+            <a href="#contact" className="lawx-final-consult">
+              Consult <span>↗</span>
             </a>
 
             <button
               type="button"
-              className={`v3-mobile-toggle ${
-                menuOpen ? "active" : ""
-              }`}
-              onClick={() =>
-                setMenuOpen(
-                  (current) => !current
-                )
-              }
+              className={`lawx-final-menu ${mobileOpen ? "active" : ""}`}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen((value) => !value)}
             >
               <span />
               <span />
@@ -172,62 +203,115 @@ export function Header() {
         </div>
       </header>
 
-      <div
-        className={`v3-mobile-menu ${
-          menuOpen ? "active" : ""
-        }`}
+      <aside
+        className={`lawx-mobile-drawer ${mobileOpen ? "active" : ""}`}
+        data-lenis-prevent
+        aria-hidden={!mobileOpen}
       >
-        <button
-          type="button"
-          onClick={() => {
-            setMenuOpen(false);
-            openServices();
-          }}
-        >
-          <span>01</span>
-          <strong>All Services</strong>
-          <b>↗</b>
+        <div className="lawx-mobile-drawer-head">
+          <a href="#" className="lawx-mobile-brand" onClick={() => setMobileOpen(false)}>
+            <Image
+              src="/lawxygen-logo-clean.png"
+              alt="LAWXYGEN"
+              width={155}
+              height={112}
+              className="lawx-mobile-logo"
+            />
+          </a>
+
+          <button type="button" className="lawx-mobile-login">Login</button>
+
+          <button
+            type="button"
+            className="lawx-mobile-close"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+        </div>
+
+        <button type="button" className="lawx-mobile-location">
+          <span className="lawx-india-flag">🇮🇳</span>
+          <span>
+            <strong>India</strong>
+            <small>Location / language</small>
+          </span>
+          <b>›</b>
         </button>
 
-        <a
-          href="#business"
-          onClick={() =>
-            setMenuOpen(false)
-          }
-        >
-          <span>02</span>
-          <strong>Business</strong>
-          <b>↗</b>
-        </a>
+        <div className="lawx-mobile-group">
+          <span className="lawx-mobile-label">LEGAL & BUSINESS</span>
 
-        <a
-          href="#compliance"
-          onClick={() =>
-            setMenuOpen(false)
-          }
-        >
-          <span>03</span>
-          <strong>Compliance</strong>
-          <b>↗</b>
-        </a>
+          <button type="button" onClick={() => openServices()}>
+            <i><MobileIcon name="services" /></i>
+            <span>Explore Services</span>
+            <b>›</b>
+          </button>
 
-        <a
-          href="#experts"
-          onClick={() =>
-            setMenuOpen(false)
-          }
-        >
-          <span>04</span>
-          <strong>Experts</strong>
-          <b>↗</b>
-        </a>
+          <a href="#business" onClick={() => setMobileOpen(false)}>
+            <i><MobileIcon name="business" /></i>
+            <span>Start a Business</span>
+            <b>›</b>
+          </a>
 
-        <a href="#login">
-          <span>05</span>
-          <strong>Login</strong>
-          <b>↗</b>
-        </a>
-      </div>
+          <a href="#compliance" onClick={() => setMobileOpen(false)}>
+            <i><MobileIcon name="compliance" /></i>
+            <span>Tax & Compliance</span>
+            <b>›</b>
+          </a>
+
+          <button type="button" onClick={() => openServices("Trademark")}>
+            <i><MobileIcon name="brand" /></i>
+            <span>IP & Trademarks</span>
+            <b>›</b>
+          </button>
+
+          <a href="#experts" onClick={() => setMobileOpen(false)}>
+            <i><MobileIcon name="lawyer" /></i>
+            <span>Find a Lawyer</span>
+            <b>›</b>
+          </a>
+
+          <a href="#experts" onClick={() => setMobileOpen(false)}>
+            <i><MobileIcon name="expert" /></i>
+            <span>Talk to an Expert</span>
+            <b>›</b>
+          </a>
+        </div>
+
+        <div className="lawx-mobile-rule" />
+
+        <div className="lawx-mobile-group compact">
+          <span className="lawx-mobile-label">LAWXYGEN</span>
+          <a href="#resources" onClick={() => setMobileOpen(false)}>
+            <span>Resources</span>
+            <b>›</b>
+          </a>
+          <a href="#contact" onClick={() => setMobileOpen(false)}>
+            <span>Contact</span>
+            <b>›</b>
+          </a>
+        </div>
+
+        <div className="lawx-mobile-bottom">
+          <button
+            type="button"
+            className="lawx-mobile-ai"
+            onClick={() => {
+              setMobileOpen(false);
+              window.dispatchEvent(new CustomEvent("lawxygen:open-ai"));
+            }}
+          >
+            <i><MobileIcon name="ai" /></i>
+            Ask LAWXYGEN AI
+          </button>
+
+          <a href="#contact" onClick={() => setMobileOpen(false)}>
+            Get Started <span>→</span>
+          </a>
+        </div>
+      </aside>
 
       <ServiceMegaMenu
         open={servicesOpen}

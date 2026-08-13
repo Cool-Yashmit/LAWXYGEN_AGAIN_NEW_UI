@@ -36,7 +36,7 @@ export function Footer() {
         <div className="v5-footer-about">
           <div className="v5-footer-logo">
             <Image
-              src="/lawxygen-logo.png"
+              src="/lawxygen-logo-clean.png"
               alt="LAWXYGEN"
               width={220}
               height={120}

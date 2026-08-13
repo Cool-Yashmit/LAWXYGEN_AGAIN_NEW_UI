@@ -74,13 +74,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$providers$2f$S
 ;
 ;
 ;
+;
 const metadata = {
     title: "LAWXYGEN | Legal, Tax & Business Services",
     description: "Business registration, tax, compliance, intellectual property, documentation and professional consultation services.",
     icons: {
-        icon: "/lawxygen-logo.png",
-        shortcut: "/lawxygen-logo.png",
-        apple: "/lawxygen-logo.png"
+        icon: "/lawxygen-favicon.png",
+        shortcut: "/lawxygen-favicon.png",
+        apple: "/lawxygen-favicon.png"
     }
 };
 function RootLayout({ children }) {
@@ -91,19 +92,19 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$providers$2f$SmoothScroll$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["SmoothScroll"], {}, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 53,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this),
                 children
             ]
         }, void 0, true, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 52,
+            lineNumber: 51,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 48,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
