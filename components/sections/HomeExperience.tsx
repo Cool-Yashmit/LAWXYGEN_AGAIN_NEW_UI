@@ -544,7 +544,7 @@ export function HomeExperience() {
         </h2>
 
         <div>
-          <a href="#services">
+          <a href="/services">
             Explore Services
             <b>↗</b>
           </a>

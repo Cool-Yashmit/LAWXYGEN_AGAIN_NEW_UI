@@ -18,7 +18,7 @@ export function Footer() {
 
         <div>
           <a
-            href="#services"
+            href="/services"
             className="v5-footer-primary"
           >
             Explore Services
