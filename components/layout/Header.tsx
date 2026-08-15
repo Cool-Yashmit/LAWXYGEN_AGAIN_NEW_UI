@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { ServiceMegaMenu } from "./ServiceMegaMenu";
+import { LoginModal } from "@/components/auth/LoginModal";
 
 type MobileIconName =
   | "services"
@@ -109,6 +110,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [serviceQuery, setServiceQuery] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const closeServices = useCallback(() => {
     setServicesOpen(false);
@@ -150,7 +152,7 @@ export function Header() {
     <>
       <header className={`lawx-final-header ${scrolled ? "scrolled" : ""}`}>
         <div className="lawx-final-nav">
-          <a href="#" className="lawx-final-brand" aria-label="LAWXYGEN home">
+          <a href="/" className="lawx-final-brand" aria-label="LAWXYGEN home">
             <Image
               src="/lawxygen-logo-clean.png"
               alt="LAWXYGEN"
@@ -165,10 +167,10 @@ export function Header() {
             <button type="button" onClick={() => openServices()}>
               Services <span>+</span>
             </button>
-            <a href="#business">Business</a>
-            <a href="#compliance">Compliance</a>
-            <a href="#experts">Find a Lawyer</a>
-            <a href="#resources">Resources</a>
+            <a href="/services/business-setup">Business</a>
+            <a href="/services/tax-compliance">Compliance</a>
+            <a href="/services/talk-lawyer">Find a Lawyer</a>
+            <a href="/services/specialized-services">Resources</a>
           </nav>
 
           <div className="lawx-final-actions">
@@ -181,11 +183,15 @@ export function Header() {
               <SearchIcon />
             </button>
 
-            <button type="button" className="lawx-final-login">
+            <button
+              type="button"
+              className="lawx-final-login"
+              onClick={() => setLoginOpen(true)}
+            >
               Login
             </button>
 
-            <a href="#contact" className="lawx-final-consult">
+            <a href="/services/talk-lawyer/online-lawyer-consultation" className="lawx-final-consult">
               Consult <span>↗</span>
             </a>
 
@@ -209,7 +215,7 @@ export function Header() {
         aria-hidden={!mobileOpen}
       >
         <div className="lawx-mobile-drawer-head">
-          <a href="#" className="lawx-mobile-brand" onClick={() => setMobileOpen(false)}>
+          <a href="/" className="lawx-mobile-brand" onClick={() => setMobileOpen(false)}>
             <Image
               src="/lawxygen-logo-clean.png"
               alt="LAWXYGEN"
@@ -219,7 +225,16 @@ export function Header() {
             />
           </a>
 
-          <button type="button" className="lawx-mobile-login">Login</button>
+          <button
+            type="button"
+            className="lawx-mobile-login"
+            onClick={() => {
+              setMobileOpen(false);
+              setLoginOpen(true);
+            }}
+          >
+            Login
+          </button>
 
           <button
             type="button"
@@ -249,13 +264,13 @@ export function Header() {
             <b>›</b>
           </button>
 
-          <a href="#business" onClick={() => setMobileOpen(false)}>
+          <a href="/services/business-setup" onClick={() => setMobileOpen(false)}>
             <i><MobileIcon name="business" /></i>
             <span>Start a Business</span>
             <b>›</b>
           </a>
 
-          <a href="#compliance" onClick={() => setMobileOpen(false)}>
+          <a href="/services/tax-compliance" onClick={() => setMobileOpen(false)}>
             <i><MobileIcon name="compliance" /></i>
             <span>Tax & Compliance</span>
             <b>›</b>
@@ -267,13 +282,13 @@ export function Header() {
             <b>›</b>
           </button>
 
-          <a href="#experts" onClick={() => setMobileOpen(false)}>
+          <a href="/services/talk-lawyer" onClick={() => setMobileOpen(false)}>
             <i><MobileIcon name="lawyer" /></i>
             <span>Find a Lawyer</span>
             <b>›</b>
           </a>
 
-          <a href="#experts" onClick={() => setMobileOpen(false)}>
+          <a href="/services/talk-lawyer" onClick={() => setMobileOpen(false)}>
             <i><MobileIcon name="expert" /></i>
             <span>Talk to an Expert</span>
             <b>›</b>
@@ -284,30 +299,23 @@ export function Header() {
 
         <div className="lawx-mobile-group compact">
           <span className="lawx-mobile-label">LAWXYGEN</span>
-          <a href="#resources" onClick={() => setMobileOpen(false)}>
+          <a href="/services/specialized-services" onClick={() => setMobileOpen(false)}>
             <span>Resources</span>
             <b>›</b>
           </a>
-          <a href="#contact" onClick={() => setMobileOpen(false)}>
+          <a href="/services/talk-lawyer/online-lawyer-consultation" onClick={() => setMobileOpen(false)}>
             <span>Contact</span>
             <b>›</b>
           </a>
         </div>
 
         <div className="lawx-mobile-bottom">
-          <button
-            type="button"
-            className="lawx-mobile-ai"
-            onClick={() => {
-              setMobileOpen(false);
-              window.dispatchEvent(new CustomEvent("lawxygen:open-ai"));
-            }}
-          >
-            <i><MobileIcon name="ai" /></i>
-            Ask LAWXYGEN AI
-          </button>
+          <a href="/services/talk-lawyer" className="lawx-mobile-find" onClick={() => setMobileOpen(false)}>
+            <i><MobileIcon name="lawyer" /></i>
+            Find a Lawyer
+          </a>
 
-          <a href="#contact" onClick={() => setMobileOpen(false)}>
+          <a href="/services/talk-lawyer/online-lawyer-consultation" onClick={() => setMobileOpen(false)}>
             Get Started <span>→</span>
           </a>
         </div>
@@ -317,6 +325,11 @@ export function Header() {
         open={servicesOpen}
         initialQuery={serviceQuery}
         onClose={closeServices}
+      />
+
+      <LoginModal
+        open={loginOpen}
+        onClose={() => setLoginOpen(false)}
       />
     </>
   );

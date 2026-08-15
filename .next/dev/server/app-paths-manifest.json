@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/services/business-setup/page": "app/services/business-setup/page.js",
+  "/services/intellectual-property/trademark-registration-indian/page": "app/services/intellectual-property/trademark-registration-indian/page.js",
+  "/services/specialized-services/page": "app/services/specialized-services/page.js"
 }

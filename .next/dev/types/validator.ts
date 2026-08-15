@@ -45,6 +45,2436 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/services/business-setup/canada-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/canada-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/canada-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/company-name-search/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/company-name-search">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/company-name-search/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/digital-signature-certificate-dsc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/digital-signature-certificate-dsc">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/digital-signature-certificate-dsc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/director-identification-number-din-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/director-identification-number-din-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/director-identification-number-din-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/dpiit-recognition-for-startups/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/dpiit-recognition-for-startups">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/dpiit-recognition-for-startups/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/foreign-subsidiary-company-setup-in-india/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/foreign-subsidiary-company-setup-in-india">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/foreign-subsidiary-company-setup-in-india/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/gem-government-e-marketplace-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/gem-government-e-marketplace-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/gem-government-e-marketplace-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/general-partnership-firm-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/general-partnership-firm-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/general-partnership-firm-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/hindu-undivided-family-huf-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/hindu-undivided-family-huf-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/hindu-undivided-family-huf-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/international-business-setup-and-incorporation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/international-business-setup-and-incorporation">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/international-business-setup-and-incorporation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/investment-pitch-deck-creation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/investment-pitch-deck-creation">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/investment-pitch-deck-creation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/limited-liability-partnership-llp-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/limited-liability-partnership-llp-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/limited-liability-partnership-llp-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/netherlands-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/netherlands-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/netherlands-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/ngo-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/ngo-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/ngo-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/nidhi-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/nidhi-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/nidhi-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/nsic-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/nsic-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/nsic-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/one-person-company-opc-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/one-person-company-opc-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/one-person-company-opc-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/private-limited-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/private-limited-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/private-limited-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/producer-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/producer-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/producer-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/public-limited-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/public-limited-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/public-limited-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/section-8-company-registration-non-profit-ngo/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/section-8-company-registration-non-profit-ngo">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/section-8-company-registration-non-profit-ngo/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/singapore-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/singapore-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/singapore-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/society-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/society-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/society-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/sole-proprietorship-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/sole-proprietorship-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/sole-proprietorship-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/startup-fundraising-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/startup-fundraising-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/startup-fundraising-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/startup-india-recognition/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/startup-india-recognition">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/startup-india-recognition/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/startup-india-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/startup-india-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/startup-india-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/trust-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/trust-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/trust-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/uae-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/uae-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/uae-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/uk-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/uk-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/uk-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/usa-company-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/usa-company-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/usa-company-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/business-setup/web-development-services-for-businesses/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/business-setup/web-development-services-for-businesses">> = Specific
+  const handler = {} as typeof import("../../../app/services/business-setup/web-development-services-for-businesses/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/apeda-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/apeda-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/apeda-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/barcode-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/barcode-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/barcode-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/bis-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/bis-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/bis-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/drug-license/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/drug-license">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/drug-license/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/factory-license/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/factory-license">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/factory-license/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/fire-safety-license-noc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/fire-safety-license-noc">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/fire-safety-license-noc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/fssai-food-license-registration-basic-state-central/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/fssai-food-license-registration-basic-state-central">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/fssai-food-license-registration-basic-state-central/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/fssai-license-renewal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/fssai-license-renewal">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/fssai-license-renewal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/halal-certification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/halal-certification">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/halal-certification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/iec-modification-surrender/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/iec-modification-surrender">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/iec-modification-surrender/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/import-export-code-iec-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/import-export-code-iec-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/import-export-code-iec-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/isi-certification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/isi-certification">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/isi-certification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/iso-certification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/iso-certification">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/iso-certification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/labour-license/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/labour-license">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/labour-license/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/msme-udyog-aadhaar-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/msme-udyog-aadhaar-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/msme-udyog-aadhaar-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/osp-other-service-provider-license/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/osp-other-service-provider-license">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/osp-other-service-provider-license/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/pollution-control-certificate-noc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/pollution-control-certificate-noc">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/pollution-control-certificate-noc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/professional-tax-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/professional-tax-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/professional-tax-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/shop-and-establishment-act-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/shop-and-establishment-act-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/shop-and-establishment-act-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/certifications/trade-license/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/certifications/trade-license">> = Specific
+  const handler = {} as typeof import("../../../app/services/certifications/trade-license/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/affidavit-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/affidavit-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/affidavit-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/apostille-document-attestation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/apostille-document-attestation">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/apostille-document-attestation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/business-transfer-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/business-transfer-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/business-transfer-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/cheque-dishonour-legal-notice-u-s-138/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/cheque-dishonour-legal-notice-u-s-138">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/cheque-dishonour-legal-notice-u-s-138/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/consumer-complaint-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/consumer-complaint-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/consumer-complaint-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/employment-agreement-offer-letter/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/employment-agreement-offer-letter">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/employment-agreement-offer-letter/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/esop-policy-and-implementation-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/esop-policy-and-implementation-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/esop-policy-and-implementation-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/founder-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/founder-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/founder-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/franchisee-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/franchisee-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/franchisee-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/general-power-of-attorney-gpa/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/general-power-of-attorney-gpa">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/general-power-of-attorney-gpa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/gift-deed/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/gift-deed">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/gift-deed/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/joint-venture-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/joint-venture-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/joint-venture-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/lease-agreement-commercial-property/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/lease-agreement-commercial-property">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/lease-agreement-commercial-property/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/legal-heir-certificate/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/legal-heir-certificate">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/legal-heir-certificate/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/license-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/license-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/license-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/loan-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/loan-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/loan-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/marriage-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/marriage-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/marriage-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/mou-memorandum-of-understanding/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/mou-memorandum-of-understanding">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/mou-memorandum-of-understanding/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/name-change-gazette-notification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/name-change-gazette-notification">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/name-change-gazette-notification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/non-disclosure-agreement-nda/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/non-disclosure-agreement-nda">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/non-disclosure-agreement-nda/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/partnership-deed-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/partnership-deed-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/partnership-deed-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/pledge-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/pledge-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/pledge-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/police-clearance-certificate-pcc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/police-clearance-certificate-pcc">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/police-clearance-certificate-pcc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/property-registration-assistance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/property-registration-assistance">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/property-registration-assistance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/relieving-letter/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/relieving-letter">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/relieving-letter/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/rent-agreement-individual/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/rent-agreement-individual">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/rent-agreement-individual/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/rental-lease-agreement-residential/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/rental-lease-agreement-residential">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/rental-lease-agreement-residential/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/rti-application-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/rti-application-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/rti-application-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/sale-deed/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/sale-deed">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/sale-deed/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/service-level-agreement-sla/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/service-level-agreement-sla">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/service-level-agreement-sla/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/shareholders-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/shareholders-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/shareholders-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/special-power-of-attorney-spa/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/special-power-of-attorney-spa">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/special-power-of-attorney-spa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/succession-certificate/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/succession-certificate">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/succession-certificate/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/terms-of-service-privacy-policy-website/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/terms-of-service-privacy-policy-website">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/terms-of-service-privacy-policy-website/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/vendor-agreement/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/vendor-agreement">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/vendor-agreement/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/will-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/will-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/will-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/documentation/will-registration-assistance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/documentation/will-registration-assistance">> = Specific
+  const handler = {} as typeof import("../../../app/services/documentation/will-registration-assistance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/complete-patent-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/complete-patent-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/complete-patent-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/copyright-assignment/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/copyright-assignment">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/copyright-assignment/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/copyright-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/copyright-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/copyright-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/copyright-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/copyright-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/copyright-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/design-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/design-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/design-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/design-renewal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/design-renewal">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/design-renewal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/design-search/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/design-search">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/design-search/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/industrial-design-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/industrial-design-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/industrial-design-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/international-trademark-registration-madrid-protocol/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/international-trademark-registration-madrid-protocol">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/international-trademark-registration-madrid-protocol/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/patent-assignment/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/patent-assignment">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/patent-assignment/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/patent-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/patent-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/patent-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/patent-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/patent-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/patent-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/patent-renewal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/patent-renewal">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/patent-renewal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/patent-search/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/patent-search">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/patent-search/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/provisional-patent-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/provisional-patent-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/provisional-patent-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-assignment/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-assignment">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-assignment/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-objection-reply/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-objection-reply">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-objection-reply/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-opposition-reply/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-opposition-reply">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-opposition-reply/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-rectification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-rectification">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-rectification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-registration-indian/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-registration-indian">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-registration-indian/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-renewal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-renewal">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-renewal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/trademark-search/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/trademark-search">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/trademark-search/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/intellectual-property/well-known-trademark-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/intellectual-property/well-known-trademark-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/intellectual-property/well-known-trademark-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services">> = Specific
+  const handler = {} as typeof import("../../../app/services/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/angel-seed-investment-legal-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/angel-seed-investment-legal-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/angel-seed-investment-legal-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/business-setup-cost-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/business-setup-cost-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/business-setup-cost-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/ccd-compulsorily-convertible-debentures-issuance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/ccd-compulsorily-convertible-debentures-issuance">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/ccd-compulsorily-convertible-debentures-issuance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/convertible-notes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/convertible-notes">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/convertible-notes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/due-diligence-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/due-diligence-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/due-diligence-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/epf-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/epf-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/epf-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/equity-shares-issuance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/equity-shares-issuance">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/equity-shares-issuance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/esop-design-and-implementation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/esop-design-and-implementation">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/esop-design-and-implementation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/gratuity-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/gratuity-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/gratuity-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/gst-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/gst-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/gst-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/hra-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/hra-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/hra-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/hsn-code-finder/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/hsn-code-finder">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/hsn-code-finder/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/income-tax-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/income-tax-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/income-tax-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/investor-term-sheet-review/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/investor-term-sheet-review">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/investor-term-sheet-review/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/lumpsum-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/lumpsum-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/lumpsum-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/mutual-fund-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/mutual-fund-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/mutual-fund-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/nps-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/nps-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/nps-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/ppf-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/ppf-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/ppf-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/preference-shares-issuance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/preference-shares-issuance">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/preference-shares-issuance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/rd-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/rd-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/rd-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/retirement-planning-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/retirement-planning-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/retirement-planning-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/salary-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/salary-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/salary-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/simple-and-compound-interest-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/simple-and-compound-interest-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/simple-and-compound-interest-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/sip-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/sip-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/sip-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/tds-calculator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/tds-calculator">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/tds-calculator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/valuation-report-for-share-issuance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/valuation-report-for-share-issuance">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/valuation-report-for-share-issuance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/specialized-services/venture-capital-funding-legal-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/specialized-services/venture-capital-funding-legal-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/specialized-services/venture-capital-funding-legal-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/advance-tax-computation-and-payment/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/advance-tax-computation-and-payment">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/advance-tax-computation-and-payment/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/ca-consultation-accounting-and-taxation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/ca-consultation-accounting-and-taxation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/ca-consultation-accounting-and-taxation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/financial-statement-preparation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/financial-statement-preparation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/financial-statement-preparation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/gst-advisory-and-consultation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/gst-advisory-and-consultation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/gst-advisory-and-consultation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/gst-audit-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/gst-audit-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/gst-audit-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/income-tax-audit-section-44ab/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/income-tax-audit-section-44ab">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/income-tax-audit-section-44ab/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/income-tax-notice-reply-assessment-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/income-tax-notice-reply-assessment-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/income-tax-notice-reply-assessment-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/payroll-compliance-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/payroll-compliance-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/payroll-compliance-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/tax-planning-and-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/tax-planning-and-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/tax-planning-and-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ca/transfer-pricing-documentation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/transfer-pricing-documentation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/transfer-pricing-documentation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/appointment-of-statutory-auditor/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/appointment-of-statutory-auditor">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/appointment-of-statutory-auditor/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/appointment-resignation-of-director/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/appointment-resignation-of-director">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/appointment-resignation-of-director/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/board-resolution-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/board-resolution-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/board-resolution-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/changes-in-company-structure-name-address-moa-aoa/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/changes-in-company-structure-name-address-moa-aoa">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/changes-in-company-structure-name-address-moa-aoa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/company-secretary-cs-consultation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/company-secretary-cs-consultation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/company-secretary-cs-consultation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/conversion-of-business-structure/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/conversion-of-business-structure">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/conversion-of-business-structure/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/director-kyc-dir-3-kyc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/director-kyc-dir-3-kyc">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/director-kyc-dir-3-kyc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/increase-in-authorized-share-capital/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/increase-in-authorized-share-capital">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/increase-in-authorized-share-capital/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/minutes-of-meetings-agm-egm/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/minutes-of-meetings-agm-egm">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/minutes-of-meetings-agm-egm/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-cs/roc-annual-filing-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-cs/roc-annual-filing-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-cs/roc-annual-filing-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/copyright-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/copyright-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/copyright-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/design-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/design-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/design-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/ip-litigation-and-infringement-cases/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/ip-litigation-and-infringement-cases">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/ip-litigation-and-infringement-cases/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/patent-drafting-and-strategy/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/patent-drafting-and-strategy">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/patent-drafting-and-strategy/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/patent-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/patent-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/patent-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/trademark-infringement-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/trademark-infringement-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/trademark-infringement-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/trademark-objection-reply/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/trademark-objection-reply">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/trademark-objection-reply/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/trademark-opposition-reply/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/trademark-opposition-reply">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/trademark-opposition-reply/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/trademark-rectification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/trademark-rectification">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/trademark-rectification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-ip-lawyer/well-known-trademark-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ip-lawyer/well-known-trademark-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ip-lawyer/well-known-trademark-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/adoption-legal-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/adoption-legal-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/adoption-legal-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/arbitration-and-mediation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/arbitration-and-mediation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/arbitration-and-mediation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/banking-and-finance-legal-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/banking-and-finance-legal-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/banking-and-finance-legal-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/cheque-bounce-dishonour-cases/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/cheque-bounce-dishonour-cases">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/cheque-bounce-dishonour-cases/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/consumer-disputes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/consumer-disputes">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/consumer-disputes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/contract-breach-disputes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/contract-breach-disputes">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/contract-breach-disputes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/criminal-law-defense/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/criminal-law-defense">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/criminal-law-defense/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/cyber-crime-legal-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/cyber-crime-legal-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/cyber-crime-legal-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/debt-recovery/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/debt-recovery">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/debt-recovery/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/divorce-legal-assistance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/divorce-legal-assistance">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/divorce-legal-assistance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/domestic-violence-cases/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/domestic-violence-cases">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/domestic-violence-cases/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/family-law-divorce-alimony-child-custody/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/family-law-divorce-alimony-child-custody">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/family-law-divorce-alimony-child-custody/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/labour-and-employment-disputes/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/labour-and-employment-disputes">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/labour-and-employment-disputes/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/online-lawyer-consultation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/online-lawyer-consultation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/online-lawyer-consultation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/property-disputes-and-eviction-cases/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/property-disputes-and-eviction-cases">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/property-disputes-and-eviction-cases/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/real-estate-legal-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/real-estate-legal-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/real-estate-legal-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/startup-and-corporate-legal-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/startup-and-corporate-legal-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/startup-and-corporate-legal-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/writ-petitions/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/writ-petitions">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/writ-petitions/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/talk-lawyer/wrongful-termination-claims/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/wrongful-termination-claims">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/wrongful-termination-claims/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/12a-and-80g-registration-for-ngos/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/12a-and-80g-registration-for-ngos">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/12a-and-80g-registration-for-ngos/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/12a-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/12a-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/12a-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/360-degree-protection-roc-compliance-accounting-legal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/360-degree-protection-roc-compliance-accounting-legal">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/360-degree-protection-roc-compliance-accounting-legal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/80g-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/80g-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/80g-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/accounting-on-quickbooks/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/accounting-on-quickbooks">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/accounting-on-quickbooks/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/accounting-on-tally/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/accounting-on-tally">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/accounting-on-tally/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/accounting-on-zoho-books/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/accounting-on-zoho-books">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/accounting-on-zoho-books/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/accounts-payable-and-receivable-management/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/accounts-payable-and-receivable-management">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/accounts-payable-and-receivable-management/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/adding-removing-directors/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/adding-removing-directors">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/adding-removing-directors/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/advance-tax-computation-and-payment/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/advance-tax-computation-and-payment">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/advance-tax-computation-and-payment/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/annual-compliance-package-for-llp/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/annual-compliance-package-for-llp">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/annual-compliance-package-for-llp/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/annual-compliance-package-for-opc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/annual-compliance-package-for-opc">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/annual-compliance-package-for-opc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/annual-compliance-package-for-private-limited-company/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/annual-compliance-package-for-private-limited-company">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/annual-compliance-package-for-private-limited-company/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/appointment-of-statutory-auditor/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/appointment-of-statutory-auditor">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/appointment-of-statutory-auditor/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/appointment-resignation-of-director/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/appointment-resignation-of-director">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/appointment-resignation-of-director/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/bank-reconciliation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/bank-reconciliation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/bank-reconciliation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/board-resolution-drafting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/board-resolution-drafting">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/board-resolution-drafting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/change-of-business-activity-object-clause/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/change-of-business-activity-object-clause">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/change-of-business-activity-object-clause/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/change-of-registered-office/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/change-of-registered-office">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/change-of-registered-office/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/changes-in-llp-name-partners-registered-office/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/changes-in-llp-name-partners-registered-office">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/changes-in-llp-name-partners-registered-office/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/changes-in-private-limited-company-name-address-directors-moa-aoa/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/changes-in-private-limited-company-name-address-directors-moa-aoa">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/changes-in-private-limited-company-name-address-directors-moa-aoa/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/composition-scheme-registration-under-gst/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/composition-scheme-registration-under-gst">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/composition-scheme-registration-under-gst/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/contract-labour-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/contract-labour-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/contract-labour-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/conversion-of-business-structure/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/conversion-of-business-structure">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/conversion-of-business-structure/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/credit-and-debit-notes-management/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/credit-and-debit-notes-management">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/credit-and-debit-notes-management/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/director-kyc-dir-3-kyc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/director-kyc-dir-3-kyc">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/director-kyc-dir-3-kyc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/e-way-bill-assistance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/e-way-bill-assistance">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/e-way-bill-assistance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/esi-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/esi-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/esi-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/esic-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/esic-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/esic-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/fcra-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/fcra-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/fcra-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/financial-statement-preparation-p-and-l-balance-sheet/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/financial-statement-preparation-p-and-l-balance-sheet">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/financial-statement-preparation-p-and-l-balance-sheet/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gratuity-planning/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gratuity-planning">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gratuity-planning/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-advisory-and-consultation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-advisory-and-consultation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-advisory-and-consultation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-amendment-modification/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-amendment-modification">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-amendment-modification/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-annual-return-filing-gstr-9c/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-annual-return-filing-gstr-9c">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-annual-return-filing-gstr-9c/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-audit-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-audit-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-audit-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-calculator-tool/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-calculator-tool">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-calculator-tool/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-cancellation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-cancellation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-cancellation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-lut-filing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-lut-filing">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-lut-filing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-notice-reply-scrutiny-assistance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-notice-reply-scrutiny-assistance">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-notice-reply-scrutiny-assistance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-refund-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-refund-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-refund-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-return-filing-gstr-1-gstr-3b-gstr-9/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-return-filing-gstr-1-gstr-3b-gstr-9">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-return-filing-gstr-1-gstr-3b-gstr-9/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/gst-revocation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/gst-revocation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/gst-revocation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/hsn-code-finder-tool/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/hsn-code-finder-tool">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/hsn-code-finder-tool/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-audit-section-44ab/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-audit-section-44ab">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-audit-section-44ab/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-calculator-tool/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-calculator-tool">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-calculator-tool/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-notice-reply-assessment-support/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-notice-reply-assessment-support">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-notice-reply-assessment-support/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-return-itr-filing-businesses/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-return-itr-filing-businesses">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-return-itr-filing-businesses/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-return-itr-filing-individuals/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-return-itr-filing-individuals">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-return-itr-filing-individuals/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/increase-in-authorized-share-capital/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/increase-in-authorized-share-capital">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/increase-in-authorized-share-capital/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/labour-law-audit/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/labour-law-audit">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/labour-law-audit/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/minutes-of-meetings-agm-egm/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/minutes-of-meetings-agm-egm">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/minutes-of-meetings-agm-egm/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/monthly-bookkeeping-and-accounting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/monthly-bookkeeping-and-accounting">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/monthly-bookkeeping-and-accounting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/new-gst-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/new-gst-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/new-gst-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/pan-card-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/pan-card-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/pan-card-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/payroll-compliance-pf-esic-pt/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/payroll-compliance-pf-esic-pt">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/payroll-compliance-pf-esic-pt/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/payroll-processing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/payroll-processing">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/payroll-processing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/professional-tax-registration-and-filing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/professional-tax-registration-and-filing">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/professional-tax-registration-and-filing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/provident-fund-pf-registration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/provident-fund-pf-registration">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/provident-fund-pf-registration/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/rbi-compliance-for-foreign-investment-fdi-fpi/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/rbi-compliance-for-foreign-investment-fdi-fpi">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/rbi-compliance-for-foreign-investment-fdi-fpi/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/roc-annual-filing-aoc-4-mgt-7/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/roc-annual-filing-aoc-4-mgt-7">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/roc-annual-filing-aoc-4-mgt-7/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/shops-and-establishment-act-compliance/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/shops-and-establishment-act-compliance">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/shops-and-establishment-act-compliance/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/smart-billing-and-invoicing-module/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/smart-billing-and-invoicing-module">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/smart-billing-and-invoicing-module/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/tan-application/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/tan-application">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/tan-application/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/tax-planning-and-advisory/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/tax-planning-and-advisory">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/tax-planning-and-advisory/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/tds-calculator-tool/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/tds-calculator-tool">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/tds-calculator-tool/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/tds-certificate-form-16-16a-generation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/tds-certificate-form-16-16a-generation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/tds-certificate-form-16-16a-generation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/tds-return-filing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/tds-return-filing">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/tds-return-filing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/transfer-pricing-documentation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/transfer-pricing-documentation">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/transfer-pricing-documentation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/vendor-and-customer-master-data-management/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/vendor-and-customer-master-data-management">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/vendor-and-customer-master-data-management/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 
 
 

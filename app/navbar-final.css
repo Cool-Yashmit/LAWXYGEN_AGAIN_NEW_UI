@@ -430,3 +430,55 @@ html.lawx-mobile-nav-open body {
     color: white;
   }
 }
+
+@media (min-width: 851px) {
+  .lawx-final-actions {
+    min-height: 44px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(20, 65, 106, .09);
+    gap: 8px;
+  }
+
+  .lawx-final-search,
+  .lawx-final-login,
+  .lawx-final-consult {
+    min-height: 40px;
+    height: 40px;
+  }
+
+  .lawx-final-search {
+    width: 40px;
+    border: 1px solid rgba(17, 67, 112, .11);
+    border-radius: 12px;
+    background: rgba(255,255,255,.46);
+  }
+
+  .lawx-final-login {
+    width: 86px;
+    min-width: 86px;
+    padding: 0 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.56);
+  }
+
+  .lawx-final-consult {
+    width: 96px;
+    padding: 0 13px;
+    border-radius: 12px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  .lawx-mobile-find {
+    border: 1px solid rgba(38, 111, 191, .22) !important;
+    background: rgba(255,255,255,.94) !important;
+    color: #155f9e !important;
+  }
+
+  .lawx-mobile-find i {
+    display: grid;
+    place-items: center;
+  }
+}

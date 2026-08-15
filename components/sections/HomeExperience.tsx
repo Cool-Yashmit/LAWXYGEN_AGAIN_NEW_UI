@@ -482,7 +482,7 @@ export function HomeExperience() {
         </div>
       </section>
 
-      <section className="v5-faq">
+      <section id="resources" className="v5-faq">
         <div>
           <span>QUESTIONS</span>
 

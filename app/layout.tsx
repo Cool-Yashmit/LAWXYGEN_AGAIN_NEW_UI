@@ -10,6 +10,9 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import "./globals.css";
 import "./lawxygen-v3.css";
 import "./navbar-final.css";
+import "./service-mega-light.css";
+import "./service-showcase-tune.css";
+import "./login-modal.css";
 
 const bodyFont = Inter({
   subsets: ["latin"],
