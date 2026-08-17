@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 type Props = {
   open: boolean;
@@ -36,6 +37,7 @@ function FacebookMark() {
 }
 
 export function LoginModal({ open, onClose }: Props) {
+  const router = useRouter();
   useEffect(() => {
     if (!open) return;
 
@@ -72,6 +74,7 @@ export function LoginModal({ open, onClose }: Props) {
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    router.push("/dashboard");
   };
 
   return (
