@@ -1,50 +1,18 @@
 {
   "app": {
-    "[project]/app/admin/appointments/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/professionals/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/requests/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/services/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/settings/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/support/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/admin/users/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/dashboard/messages/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/dashboard/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
-    "[project]/app/dashboard/services/page": [
-      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
-      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
-    ],
     "[project]/app/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/business-setup/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/business-setup/private-limited-company-registration/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/tax-compliance/page": [
       "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
       "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ]
