@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Drug License | LAWXYGEN",
+  description: "Drug License — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Drug License | LAWXYGEN",
-  description: "Drug License service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Drug License"}
-      category={"Certifications"}
-      categorySlug={"certifications"}
-      accent={"#06B6D4"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Drug License" category="Certifications" categorySlug="certifications" theme={ 3 } accent="#df8d1e" pageClassName={styles.servicePage} />;
 }

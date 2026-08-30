@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Transfer Pricing Documentation | LAWXYGEN",
+  description: "Transfer Pricing Documentation — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Transfer Pricing Documentation | LAWXYGEN",
-  description: "Transfer Pricing Documentation service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Transfer Pricing Documentation"}
-      category={"Talk to a CA"}
-      categorySlug={"talk-ca"}
-      accent={"#14B8A6"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Transfer Pricing Documentation" category="Talk to a CA" categorySlug="talk-ca" theme={ 4 } accent="#d85877" pageClassName={styles.servicePage} />;
 }

@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Labour Law Audit | LAWXYGEN",
+  description: "Labour Law Audit — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Labour Law Audit | LAWXYGEN",
-  description: "Labour Law Audit service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Labour Law Audit"}
-      category={"Tax & Compliance"}
-      categorySlug={"tax-compliance"}
-      accent={"#15B87A"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Labour Law Audit" category="Tax & Compliance" categorySlug="tax-compliance" theme={ 1 } accent="#16a47b" pageClassName={styles.servicePage} />;
 }

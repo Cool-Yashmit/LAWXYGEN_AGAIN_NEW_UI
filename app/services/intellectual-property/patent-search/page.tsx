@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Patent Search | LAWXYGEN",
+  description: "Patent Search — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Patent Search | LAWXYGEN",
-  description: "Patent Search service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Patent Search"}
-      category={"Intellectual Property"}
-      categorySlug={"intellectual-property"}
-      accent={"#8B5CF6"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Patent Search" category="Intellectual Property" categorySlug="intellectual-property" theme={ 5 } accent="#1b9ac7" pageClassName={styles.servicePage} />;
 }

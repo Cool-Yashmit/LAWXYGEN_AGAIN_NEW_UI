@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Web Development Services for Businesses | LAWXYGEN",
+  description: "Web Development Services for Businesses — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Web Development Services for Businesses | LAWXYGEN",
-  description: "Web Development Services for Businesses service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Web Development Services for Businesses"}
-      category={"Business Setup"}
-      categorySlug={"business-setup"}
-      accent={"#2F80ED"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Web Development Services for Businesses" category="Business Setup" categorySlug="business-setup" theme={ 1 } accent="#16a47b" pageClassName={styles.servicePage} />;
 }

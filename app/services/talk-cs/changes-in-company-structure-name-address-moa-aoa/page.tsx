@@ -1,19 +1,11 @@
+export const metadata = {
+  title: "Changes in Company Structure (Name, Address, MOA/AOA) | LAWXYGEN",
+  description: "Changes in Company Structure (Name, Address, MOA/AOA) — a focused LAWXYGEN service journey.",
+};
+
 import { ServicePageShell } from "@/components/services/ServicePageShell";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Changes in Company Structure (Name, Address, MOA/AOA) | LAWXYGEN",
-  description: "Changes in Company Structure (Name, Address, MOA/AOA) service page on LAWXYGEN.",
-};
-
 export default function Page() {
-  return (
-    <ServicePageShell
-      title={"Changes in Company Structure (Name, Address, MOA/AOA)"}
-      category={"Talk to a CS"}
-      categorySlug={"talk-cs"}
-      accent={"#6366F1"}
-      pageClassName={styles.servicePage}
-    />
-  );
+  return <ServicePageShell title="Changes in Company Structure (Name, Address, MOA/AOA)" category="Talk to a CS" categorySlug="talk-cs" theme={ 5 } accent="#1b9ac7" pageClassName={styles.servicePage} />;
 }

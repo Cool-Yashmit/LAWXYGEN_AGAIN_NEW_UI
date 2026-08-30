@@ -37,7 +37,7 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/turbopack-_08bm286._.js",
       "static/chunks/_219uq1s._.js"
     ],
-    "/services/business-setup/private-limited-company-registration/page": [
+    "/services/tax-compliance/new-gst-registration/page": [
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1di75ot._.js",
       "static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jm.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js",
@@ -48,9 +48,9 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_@swc_helpers_cjs_1r9vbqw._.js",
       "static/chunks/_1anvha4._.js",
       "static/chunks/turbopack-_08bm286._.js",
-      "static/chunks/_0ezwh0-._.js"
+      "static/chunks/_0ta_bdg._.js"
     ],
-    "/services/tax-compliance/page": [
+    "/services/tax-compliance/gst-amendment-modification/page": [
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1di75ot._.js",
       "static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jm.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js",
@@ -61,20 +61,7 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_@swc_helpers_cjs_1r9vbqw._.js",
       "static/chunks/_1anvha4._.js",
       "static/chunks/turbopack-_08bm286._.js",
-      "static/chunks/_13n9c7l._.js"
-    ],
-    "/services/business-setup/page": [
-      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1di75ot._.js",
-      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jm.js",
-      "static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js",
-      "static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-6._.js",
-      "static/chunks/node_modules_next_dist_compiled_1amofcm._.js",
-      "static/chunks/node_modules_next_dist_client_0_90u2t._.js",
-      "static/chunks/node_modules_next_dist_1e8vcs8._.js",
-      "static/chunks/node_modules_@swc_helpers_cjs_1r9vbqw._.js",
-      "static/chunks/_1anvha4._.js",
-      "static/chunks/turbopack-_08bm286._.js",
-      "static/chunks/_0-5274k._.js"
+      "static/chunks/_0-5bo2b._.js"
     ]
   },
   "pagesChunkGroupBootstrapParams": {},

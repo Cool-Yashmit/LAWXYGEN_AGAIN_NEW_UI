@@ -1,298 +1,163 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { categoryHref, serviceHref } from "@/lib/serviceRoutes";
-import { getServicePageContent } from "./servicePageContent";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { serviceHref } from "@/lib/serviceRoutes";
+import { getServiceContent } from "./servicePageContent";
 import styles from "./ServicePageShell.module.css";
-
-type Audience = "individual" | "business";
 
 type Props = {
   title: string;
   category: string;
   categorySlug: string;
   related: string[];
+  theme: number;
+  accent: string;
 };
 
-const sections = [
-  ["overview", "Overview"],
-  ["eligibility", "Eligibility"],
-  ["benefits", "Benefits"],
-  ["documents", "Documents"],
-  ["process", "Process"],
-  ["tutorial", "Expert video"],
-  ["pricing", "Pricing"],
-  ["related", "Related"],
-  ["faq", "FAQs"],
-] as const;
+const themes = [
+  { bg: "#f5f9ff", panel: "#edf5ff", soft: "#dcebff", ink: "#0b2a4a", accent: "#2f7cf6" },
+  { bg: "#f5fbf9", panel: "#eaf8f3", soft: "#d3f1e5", ink: "#10382f", accent: "#16a47b" },
+  { bg: "#f8f6ff", panel: "#f0ebff", soft: "#e2d9ff", ink: "#2a205e", accent: "#7958ee" },
+  { bg: "#fffaf4", panel: "#fff1dc", soft: "#ffe4bd", ink: "#4c2f0e", accent: "#df8d1e" },
+  { bg: "#fff7f8", panel: "#ffecef", soft: "#ffdce5", ink: "#541e2b", accent: "#d85877" },
+  { bg: "#f3fbff", panel: "#e6f7ff", soft: "#d3effc", ink: "#103b52", accent: "#1b9ac7" },
+];
 
-export function ServicePageExperience({ title, category, categorySlug, related }: Props) {
-  const [audience, setAudience] = useState<Audience>("business");
-  const [indexOpen, setIndexOpen] = useState(true);
-  const [faqOpen, setFaqOpen] = useState<number | null>(0);
-  const content = useMemo(() => getServicePageContent(title, category), [title, category]);
-  const marqueeItems = useMemo(() => {
-    const items = related.length ? related : [title];
-    return [...items, ...items];
-  }, [related, title]);
+const layouts = ["split", "editorial", "rail", "timeline", "cards", "catalog"] as const;
+const indexItems = ["Overview", "Eligibility", "Expert tutorial", "Benefits", "Documents", "Process", "Pricing", "Related", "Expert help", "FAQs"];
 
-  const openLogin = () => {
-    document.querySelector<HTMLButtonElement>(".lawx-final-login")?.click();
-  };
+function jump(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
-  const goTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+export function ServicePageExperience({ title, category, categorySlug, related, theme, accent }: Props) {
+  const visual = themes[theme % themes.length];
+  const layout = layouts[theme % layouts.length];
+  const content = useMemo(() => getServiceContent(title, category), [title, category]);
+  const [indexOpen, setIndexOpen] = useState(false);
+  const [faqOpen, setFaqOpen] = useState(0);
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+      });
+    }, { threshold: 0.12 });
+    nodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setSlide((value) => (value + 1) % Math.max(related.length, 1)), 3400);
+    return () => window.clearInterval(timer);
+  }, [related.length]);
+
+  const palette = { "--page-bg": visual.bg, "--page-panel": visual.panel, "--page-soft": visual.soft, "--page-ink": visual.ink, "--page-accent": accent || visual.accent } as React.CSSProperties;
 
   return (
-    <>
-      <div className={styles.audienceBar}>
-        <span>Registering as</span>
-        <div className={styles.audienceTabs} role="tablist" aria-label="Customer type">
-          <button
-            type="button"
-            className={audience === "individual" ? styles.activeAudience : ""}
-            onClick={() => setAudience("individual")}
-            role="tab"
-            aria-selected={audience === "individual"}
-          >
-            Individual
-          </button>
-          <button
-            type="button"
-            className={audience === "business" ? styles.activeAudience : ""}
-            onClick={() => setAudience("business")}
-            role="tab"
-            aria-selected={audience === "business"}
-          >
-            Business
-          </button>
-        </div>
-        <p>
-          {audience === "business"
-            ? "For founders, teams and businesses completing this service."
-            : "For an individual starting or managing the service personally."}
-        </p>
+    <div className={`${styles.experience} ${styles[`layout-${layout}`]}`} style={palette}>
+      <div className={styles.pageTop} data-reveal>
+        <div className={styles.crumbs}><Link href="/services">Services</Link><span>/</span><Link href={`/services/${categorySlug}`}>{category}</Link><span>/</span><strong>{title}</strong></div>
+        <button className={styles.indexToggle} type="button" onClick={() => setIndexOpen((value) => !value)}>{indexOpen ? "Hide index" : "Page index"}<span>{indexOpen ? "−" : "+"}</span></button>
       </div>
 
-      <section className={styles.hero}>
-        <div className={styles.heroCopy}>
-          <span className={styles.eyebrow}>{category}</span>
-          <h1>{title}</h1>
-          <p className={styles.heroSummary}>{content.summary}</p>
-          <div className={styles.heroPoints}>
-            {content.heroPoints.map((point) => (
-              <span key={point}><i>✓</i>{point}</span>
-            ))}
-          </div>
-          <div className={styles.heroActions}>
-            <button type="button" className={styles.primaryAction} onClick={openLogin}>
-              Start service <span>↗</span>
-            </button>
-            <a href="/services/talk-lawyer/online-lawyer-consultation" className={styles.secondaryAction}>
-              Talk to an expert <span>→</span>
-            </a>
-          </div>
-        </div>
+      {indexOpen && (
+        <nav className={styles.indexBar} data-reveal aria-label="Service page sections">
+          {indexItems.map((item, index) => {
+            const ids = ["overview", "eligibility", "tutorial", "benefits", "documents", "process", "pricing", "related", "help", "faq"];
+            return <button key={item} type="button" onClick={() => jump(ids[index])}><b>{String(index + 1).padStart(2, "0")}</b>{item}</button>;
+          })}
+        </nav>
+      )}
 
-        <aside className={styles.workspaceCard} aria-label="LAWXYGEN service workspace">
-          <div className={styles.workspaceTop}>
-            <div>
-              <span>YOUR SERVICE WORKSPACE</span>
-              <strong>Ready when you are.</strong>
-            </div>
-            <b>0%</b>
+      <section className={styles.hero} data-reveal>
+        <div className={styles.heroOrb} />
+        <div className={styles.heroCopy}>
+          <div className={styles.kicker}>{category.toUpperCase()} · LAWXYGEN</div>
+          <h1>{title}</h1>
+          <p>{content.hero}</p>
+          <div className={styles.heroActions}>
+            <Link className={styles.primary} href="/login">Start this service <span>↗</span></Link>
+            <button className={styles.secondary} type="button" onClick={() => jump("help")}>Talk to an expert <span>→</span></button>
           </div>
-          <div className={styles.workspaceProgress}><i /></div>
-          <div className={styles.workspaceRows}>
-            <div><span>Account</span><strong>Not signed in</strong></div>
-            <div><span>Status</span><strong>Not started</strong></div>
-            <div><span>Next step</span><strong>Sign in and share details</strong></div>
+          <div className={styles.heroFacts}>{content.highlights.map((item) => <span key={item}>{item}</span>)}</div>
+        </div>
+        <aside className={styles.startPanel}>
+          <div className={styles.panelEyebrow}>SERVICE WORKSPACE <span>01</span></div>
+          <h2>Keep the next action visible.</h2>
+          <div className={styles.statusList}>
+            <div><span>Service</span><strong>{title}</strong></div>
+            <div><span>Category</span><strong>{category}</strong></div>
+            <div><span>Status</span><strong>Ready to start</strong></div>
+            <div><span>Next</span><strong>Review requirements</strong></div>
           </div>
-          <button type="button" onClick={openLogin}>Login / Sign up <span>→</span></button>
-          <p>After sign-in, track documents, actions and service status from your LAWXYGEN dashboard.</p>
+          <Link href="/login" className={styles.panelButton}>Log in / Sign up <span>→</span></Link>
         </aside>
       </section>
 
-      <div className={styles.factStrip}>
-        {content.facts.map((fact) => (
-          <div key={fact.label}><span>{fact.label}</span><strong>{fact.value}</strong></div>
-        ))}
-      </div>
-
-      <div className={styles.bodyGrid}>
-        <aside className={`${styles.sectionIndex} ${indexOpen ? styles.indexOpen : styles.indexClosed}`}>
-          <button type="button" className={styles.indexToggle} onClick={() => setIndexOpen((value) => !value)}>
-            <span>{indexOpen ? "On this page" : "Index"}</span>
-            <b>{indexOpen ? "−" : "+"}</b>
-          </button>
-          {indexOpen && (
-            <nav aria-label="Service page sections">
-              {sections.map(([id, label], index) => (
-                <button key={id} type="button" onClick={() => goTo(id)}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>{label}
-                </button>
-              ))}
-            </nav>
-          )}
-        </aside>
-
-        <div className={styles.sections}>
-          <section id="overview" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>01</span>
-              <div><small>OVERVIEW</small><h2>What you should know first.</h2></div>
-            </div>
-            <div className={styles.readingGrid}>
-              <div className={styles.prose}>
-                {content.overview.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
-              <div className={styles.noteCard}>
-                <span>LAWXYGEN NOTE</span>
-                <strong>Clear before you file.</strong>
-                <p>We keep the legal process, documents and next action visible so you know what is happening at each stage.</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="eligibility" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>02</span>
-              <div><small>ELIGIBILITY</small><h2>Quick eligibility check.</h2></div>
-            </div>
-            <div className={styles.checkList}>
-              {content.eligibility.map((item, index) => (
-                <article key={item.title}>
-                  <i>{String(index + 1).padStart(2, "0")}</i>
-                  <div><h3>{item.title}</h3><p>{item.text}</p></div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="benefits" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>03</span>
-              <div><small>BENEFITS</small><h2>Why businesses choose this structure.</h2></div>
-            </div>
-            <div className={styles.benefitGrid}>
-              {content.benefits.map((item, index) => (
-                <article key={item.title}>
-                  <i>{String(index + 1).padStart(2, "0")}</i>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="documents" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>04</span>
-              <div><small>DOCUMENTS</small><h2>Prepare these before filing.</h2></div>
-            </div>
-            <div className={styles.documentGrid}>
-              {content.documentGroups.map((group) => (
-                <article key={group.title}>
-                  <h3>{group.title}</h3>
-                  <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="process" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>05</span>
-              <div><small>PROCESS</small><h2>From details to incorporation.</h2></div>
-            </div>
-            <div className={styles.processList}>
-              {content.process.map((step, index) => (
-                <article key={step.title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="tutorial" className={`${styles.section} ${styles.tutorialSection}`}>
-            <div className={styles.videoPanel}>
-              <div className={styles.videoBadge}>EXPERT VIDEO</div>
-              <button type="button" aria-label="Expert tutorial coming soon">▶</button>
-              <span>LAWXYGEN expert tutorial</span>
-            </div>
-            <div className={styles.tutorialCopy}>
-              <span>06 — EXPERT VIDEO</span>
-              <h2>Prefer watching instead?</h2>
-              <p>The page is ready for a short LAWXYGEN expert video. It will be enabled when the approved service tutorial is available.</p>
-            </div>
-          </section>
-
-          <section id="pricing" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>07</span>
-              <div><small>PRICING</small><h2>Know the cost before filing.</h2></div>
-            </div>
-            <div className={styles.pricingPanel}>
-              <div>
-                <span>TRANSPARENT QUOTE</span>
-                <strong>Get the exact LAWXYGEN price</strong>
-                <p>{content.pricingNote}</p>
-              </div>
-              <button type="button" onClick={openLogin}>Get started <span>↗</span></button>
-            </div>
-          </section>
-
-          <section id="related" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>08</span>
-              <div><small>RELATED SERVICES</small><h2>Useful next steps.</h2></div>
-            </div>
-            <div className={styles.marquee}>
-              <div className={styles.marqueeTrack}>
-                {marqueeItems.map((service, index) => (
-                  <a key={`${service}-${index}`} href={serviceHref(categorySlug, service)}>
-                    <span>{service}</span><b>↗</b>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <a className={styles.categoryLink} href={categoryHref(categorySlug)}>Browse all {category} services <span>→</span></a>
-          </section>
-
-          <section className={styles.helpSection}>
-            <div>
-              <span>NEED HELP?</span>
-              <h2>Not sure what applies to you?</h2>
-              <p>Speak with a LAWXYGEN expert before you start. We can help you identify the right service and next step.</p>
-            </div>
-            <a href="/services/talk-lawyer/online-lawyer-consultation">Talk to an expert <span>↗</span></a>
-          </section>
-
-          <section id="faq" className={styles.section}>
-            <div className={styles.sectionHeading}>
-              <span>09</span>
-              <div><small>FAQ</small><h2>Common questions.</h2></div>
-            </div>
-            <div className={styles.faqList}>
-              {content.faqs.map(([question, answer], index) => (
-                <article key={question} className={faqOpen === index ? styles.faqActive : ""}>
-                  <button type="button" onClick={() => setFaqOpen(faqOpen === index ? null : index)} aria-expanded={faqOpen === index}>
-                    <span>{question}</span><b>{faqOpen === index ? "−" : "+"}</b>
-                  </button>
-                  <div><p>{answer}</p></div>
-                </article>
-              ))}
-            </div>
-          </section>
+      <section id="overview" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>01 · OVERVIEW</div>
+        <div className={styles.sectionGrid}>
+          <h2>{title}<br /><em>at a glance.</em></h2>
+          <div><p className={styles.largeCopy}>{content.overview}</p><div className={styles.signalRow}>{content.highlights.map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}</div></div>
         </div>
-      </div>
+      </section>
 
-      <a className={styles.floatingHelp} href="/services/talk-lawyer/online-lawyer-consultation" aria-label="Talk to a LAWXYGEN expert">
-        <span>?</span><b>Need help?</b>
-      </a>
-    </>
+      <section id="eligibility" className={`${styles.section} ${styles.alt}`} data-reveal>
+        <div className={styles.sectionLabel}>02 · ELIGIBILITY</div>
+        <div className={styles.eligibilityWrap}>
+          <div><h2>Know before<br />you begin.</h2><p>Use this checklist as a practical starting point. Service-specific conditions should be confirmed for the actual case.</p></div>
+          <div className={styles.eligibilityList}>{content.eligibility.map((item, i) => <div key={item}><b>{String(i + 1).padStart(2, "0")}</b><span>{item}</span></div>)}</div>
+        </div>
+      </section>
+
+      <section id="tutorial" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>03 · EXPERT TUTORIAL</div>
+        <div className={styles.videoGrid}>
+          <div className={styles.videoPanel}><div className={styles.play}>▶</div><div><span>LAWXYGEN EXPERT</span><strong>See how the service works.</strong></div></div>
+          <div><h2>Understand the journey before you start.</h2><p>{content.tutorial}</p><button className={styles.textAction} type="button" onClick={() => jump("help")}>Talk to an expert <span>→</span></button></div>
+        </div>
+      </section>
+
+      <section id="benefits" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>04 · BENEFITS</div>
+        <div className={styles.sectionHead}><h2>Why this service matters.</h2><p>Short, useful reasons to choose a guided route.</p></div>
+        <div className={styles.benefitGrid}>{content.benefits.map(([titleText, body], i) => <article key={titleText}><span>{String(i + 1).padStart(2, "0")}</span><h3>{titleText}</h3><p>{body}</p></article>)}</div>
+      </section>
+
+      <section id="documents" className={`${styles.section} ${styles.alt}`} data-reveal>
+        <div className={styles.sectionLabel}>05 · DOCUMENTS</div>
+        <div className={styles.sectionHead}><h2>Prepare what matters.</h2><p>Keep the essential records grouped so the next stage stays straightforward.</p></div>
+        <div className={styles.documentGrid}>{content.documents.map(([group, items]) => <article key={group}><span>{group}</span><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div>
+      </section>
+
+      <section id="process" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>06 · PROCESS</div>
+        <div className={styles.processGrid}><div><h2>From first step<br />to next action.</h2><p>Every stage is kept visible so the user knows what happens next.</p></div><div className={styles.steps}>{content.process.map(([num, step]) => <div key={num}><span>{num}</span><strong>{step}</strong><i>↗</i></div>)}</div></div>
+      </section>
+
+      <section id="pricing" className={`${styles.section} ${styles.alt}`} data-reveal>
+        <div className={styles.sectionLabel}>07 · PRICING</div>
+        <div className={styles.pricingCard}><div><span>LAWXYGEN SERVICE</span><h2>Clear scope.<br />Clear next step.</h2><p>{content.pricing}</p></div><Link href="/login" className={styles.primary}>Get started <span>↗</span></Link></div>
+      </section>
+
+      <section id="related" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>08 · RELATED SERVICES</div>
+        <div className={styles.sectionHead}><h2>Continue where you need to.</h2><p>Related LAWXYGEN routes, kept one click away.</p></div>
+        <div className={styles.relatedViewport}><div className={styles.relatedTrack} style={{ transform: `translateX(-${slide * 33.3333}%)` }}>{[...related, ...related, ...related].map((service, i) => <Link href={serviceHref(categorySlug, service)} key={`${service}-${i}`}><small>{String((i % Math.max(related.length, 1)) + 1).padStart(2, "0")}</small><strong>{service}</strong><span>↗</span></Link>)}</div></div>
+      </section>
+
+      <section id="help" className={styles.section} data-reveal>
+        <div className={styles.helpPanel}><div><span>09 · TALK TO AN EXPERT</span><h2>Need a clearer next step?</h2><p>{content.help}</p></div><Link href="/services/talk-lawyer/online-lawyer-consultation" className={styles.lightButton}>Talk to an expert <span>→</span></Link></div>
+      </section>
+
+      <section id="faq" className={styles.section} data-reveal>
+        <div className={styles.sectionLabel}>10 · FAQs</div>
+        <div className={styles.faqGrid}><h2>Common questions,<br />answered clearly.</h2><div className={styles.faqList}>{content.faqs.map(([q, a], i) => <article key={q}><button type="button" onClick={() => setFaqOpen(faqOpen === i ? -1 : i)}><span>{q}</span><b>{faqOpen === i ? "−" : "+"}</b></button>{faqOpen === i && <p>{a}</p>}</article>)}</div></div>
+      </section>
+    </div>
   );
 }
