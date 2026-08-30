@@ -1,5 +1,7 @@
 {
   "/page": "app/page.js",
+  "/services/specialized-services/hra-calculator/page": "app/services/specialized-services/hra-calculator/page.js",
+  "/services/specialized-services/page": "app/services/specialized-services/page.js",
   "/services/tax-compliance/gst-amendment-modification/page": "app/services/tax-compliance/gst-amendment-modification/page.js",
   "/services/tax-compliance/new-gst-registration/page": "app/services/tax-compliance/new-gst-registration/page.js"
 }
