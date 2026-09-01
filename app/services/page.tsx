@@ -1,50 +1,5 @@
-import type { CSSProperties } from "react";
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import Link from "next/link";
 import { serviceCatalog } from "@/data/serviceCatalog";
-import { categoryHref } from "@/lib/serviceRoutes";
-import styles from "../services.module.css";
-
-export const metadata = {
-  title: "All Services | LAWXYGEN",
-  description: "Browse the complete LAWXYGEN service directory.",
-};
-
-export default function ServicesPage() {
-  return (
-    <>
-      <Header />
-      <main className={styles.page}>
-        <div className={styles.wrap}>
-          <section className={styles.hero}>
-            <span>LAWXYGEN SERVICE DIRECTORY</span>
-            <h1>Every service, connected.</h1>
-            <p>
-              Open any category and continue to its individual service pages. The complete route
-              structure is ready for the final client-provided content.
-            </p>
-          </section>
-
-          <section className={styles.grid}>
-            {serviceCatalog.map((group) => (
-              <a
-                key={group.slug}
-                href={categoryHref(group.slug)}
-                className={styles.card}
-                style={{ "--card-accent": group.accent } as CSSProperties}
-              >
-                <i />
-                <h2>{group.label}</h2>
-                <div>
-                  <span>{group.services.length} services</span>
-                  <b>Explore ↗</b>
-                </div>
-              </a>
-            ))}
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
+export default function ServicesPage(){return <><Header/><main style={{padding:"120px 24px 80px",background:"#edf5fb",minHeight:"100vh"}}><div style={{maxWidth:1380,margin:"0 auto"}}><p style={{letterSpacing:".15em",fontSize:11,fontWeight:800,color:"#2f80ed"}}>LAWXYGEN SERVICES</p><h1 style={{fontFamily:"var(--v3-display)",fontSize:"clamp(48px,7vw,92px)",lineHeight:.95,letterSpacing:"-.04em",margin:"14px 0 28px"}}>Find the right service.</h1><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",gap:12}}>{serviceCatalog.map(g=><Link key={g.slug} href={`/services/${g.slug}`} style={{padding:22,border:"1px solid rgba(24,69,112,.12)",borderRadius:18,background:"rgba(255,255,255,.8)",color:"#123d63"}}><strong style={{display:"block",fontSize:18}}>{g.label}</strong><span style={{display:"block",marginTop:6,color:"#6b849d",fontSize:13}}>{g.services.length} services</span></Link>)}</div></div></main><Footer/></>}

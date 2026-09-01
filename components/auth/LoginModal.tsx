@@ -1,12 +1,14 @@
 "use client";
 
-import { FormEvent, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { FormEvent, useEffect, useState } from "react";
 
 type Props = {
   open: boolean;
   onClose: () => void;
 };
+
+type LoginMethod = "email" | "mobile";
 
 function GoogleMark() {
   return (
@@ -37,7 +39,9 @@ function FacebookMark() {
 }
 
 export function LoginModal({ open, onClose }: Props) {
-  const router = useRouter();
+  const [method, setMethod] = useState<LoginMethod>("email");
+  const [otpSent, setOtpSent] = useState(false);
+
   useEffect(() => {
     if (!open) return;
 
@@ -46,6 +50,8 @@ export function LoginModal({ open, onClose }: Props) {
     const previous = {
       position: body.style.position,
       top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
       width: body.style.width,
       overflow: body.style.overflow,
     };
@@ -57,24 +63,38 @@ export function LoginModal({ open, onClose }: Props) {
     document.documentElement.classList.add("lawx-auth-open");
     body.style.position = "fixed";
     body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
     body.style.width = "100%";
     body.style.overflow = "hidden";
+
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
       document.documentElement.classList.remove("lawx-auth-open");
+      window.removeEventListener("keydown", onKeyDown);
+
       body.style.position = previous.position;
       body.style.top = previous.top;
+      body.style.left = previous.left;
+      body.style.right = previous.right;
       body.style.width = previous.width;
       body.style.overflow = previous.overflow;
-      window.removeEventListener("keydown", onKeyDown);
-      window.scrollTo(0, scrollY);
+
+      window.scrollTo({ top: scrollY, left: 0, behavior: "auto" });
     };
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) {
+      setOtpSent(false);
+      setMethod("email");
+    }
+  }, [open]);
+
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    router.push("/dashboard");
+    if (method === "mobile" && !otpSent) setOtpSent(true);
   };
 
   return (
@@ -84,6 +104,10 @@ export function LoginModal({ open, onClose }: Props) {
         className={`lawx-auth-backdrop ${open ? "active" : ""}`}
         aria-label="Close login"
         onClick={onClose}
+        onWheel={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+        }}
       />
 
       <section
@@ -93,12 +117,34 @@ export function LoginModal({ open, onClose }: Props) {
         aria-labelledby="lawx-login-title"
         aria-hidden={!open}
         data-lenis-prevent
+        onWheel={(event) => event.stopPropagation()}
       >
-        <button type="button" className="lawx-auth-close" onClick={onClose} aria-label="Close login">
-          ×
-        </button>
+        <div className="lawx-auth-glow" />
 
-        <h2 id="lawx-login-title">Log in or sign up</h2>
+        <div className="lawx-auth-brand-row">
+          <Image
+            src="/lawxygen-logo-clean.png"
+            alt="LAWXYGEN"
+            width={112}
+            height={56}
+            className="lawx-auth-logo"
+          />
+
+          <button
+            type="button"
+            className="lawx-auth-close"
+            onClick={onClose}
+            aria-label="Close login"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="lawx-auth-title-block">
+          <span>SECURE CLIENT ACCESS</span>
+          <h2 id="lawx-login-title">Log in or sign up</h2>
+          <p>Access consultations, appointments and your LAWXYGEN client account.</p>
+        </div>
 
         <div className="lawx-auth-socials">
           <button type="button" className="lawx-auth-social-button">
@@ -117,20 +163,88 @@ export function LoginModal({ open, onClose }: Props) {
           </button>
         </div>
 
-        <div className="lawx-auth-divider"><span>OR</span></div>
+        <div className="lawx-auth-divider">
+          <span>OR</span>
+        </div>
+
+        <div className="lawx-auth-method" aria-label="Login method">
+          <button
+            type="button"
+            className={method === "email" ? "active" : ""}
+            onClick={() => {
+              setMethod("email");
+              setOtpSent(false);
+            }}
+          >
+            Email
+          </button>
+          <button
+            type="button"
+            className={method === "mobile" ? "active" : ""}
+            onClick={() => {
+              setMethod("mobile");
+              setOtpSent(false);
+            }}
+          >
+            Mobile + OTP
+          </button>
+        </div>
 
         <form className="lawx-auth-form" onSubmit={submit}>
-          <label className="lawx-auth-field">
-            <span>Email</span>
-            <div>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
-              </svg>
-              <input type="email" aria-label="Email" autoComplete="email" autoFocus={open} />
-            </div>
-          </label>
+          {method === "email" ? (
+            <>
+              <label>
+                <span>Email address</span>
+                <input type="email" placeholder="you@example.com" autoComplete="email" />
+              </label>
 
-          <button type="submit" className="lawx-auth-submit">Continue</button>
+              <label>
+                <span>Password</span>
+                <input type="password" placeholder="Enter your password" autoComplete="current-password" />
+              </label>
+
+              <div className="lawx-auth-meta">
+                <label>
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <button type="button">Forgot password?</button>
+              </div>
+            </>
+          ) : (
+            <>
+              <label>
+                <span>Mobile number</span>
+                <div className="lawx-auth-phone-field">
+                  <b>+91</b>
+                  <input type="tel" placeholder="98765 43210" autoComplete="tel" />
+                </div>
+              </label>
+
+              {otpSent && (
+                <label>
+                  <span>Enter 6-digit OTP</span>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    maxLength={6}
+                    placeholder="• • • • • •"
+                    autoComplete="one-time-code"
+                    className="lawx-auth-otp"
+                  />
+                </label>
+              )}
+            </>
+          )}
+
+          <button type="submit" className="lawx-auth-submit">
+            {method === "email"
+              ? "Continue"
+              : otpSent
+                ? "Verify OTP"
+                : "Send OTP"}
+            <span>→</span>
+          </button>
         </form>
 
         <label className="lawx-auth-consent">

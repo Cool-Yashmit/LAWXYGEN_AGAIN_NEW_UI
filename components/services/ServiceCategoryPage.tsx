@@ -1,64 +1,11 @@
-import type { CSSProperties } from "react";
-import { Footer } from "@/components/layout/Footer";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { serviceCatalog } from "@/data/serviceCatalog";
 import { serviceHref } from "@/lib/serviceRoutes";
 import styles from "./ServiceCategoryPage.module.css";
 
-type Props = {
-  groupSlug: string;
-};
-
-export function ServiceCategoryPage({ groupSlug }: Props) {
-  const group = serviceCatalog.find((item) => item.slug === groupSlug);
-
-  if (!group) return null;
-
-  return (
-    <>
-      <Header />
-      <main
-        className={styles.page}
-        style={{ "--category-accent": group.accent } as CSSProperties}
-      >
-        <div className={styles.wrap}>
-          <div className={styles.breadcrumbs}>
-            <a href="/">Home</a>
-            <i />
-            <a href="/services">Services</a>
-          </div>
-
-          <section className={styles.hero} data-letter={group.label.charAt(0)}>
-            <span className={styles.kicker}>LAWXYGEN SERVICE CATEGORY</span>
-            <h1>{group.label}</h1>
-            <p>
-              Browse every connected LAWXYGEN service in this category. Detailed service content
-              will be added to each individual page after the final content is supplied.
-            </p>
-          </section>
-
-          <section className={styles.directory}>
-            <div className={styles.directoryHead}>
-              <div>
-                <span>SERVICE DIRECTORY</span>
-                <h2>{group.label}</h2>
-              </div>
-              <b>{group.services.length} services</b>
-            </div>
-
-            <div className={styles.list}>
-              {group.services.map((service, index) => (
-                <a href={serviceHref(group.slug, service)} key={service}>
-                  <small>{String(index + 1).padStart(2, "0")}</small>
-                  <strong>{service}</strong>
-                  <b>↗</b>
-                </a>
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+export function ServiceCategoryPage({ slug }:{slug:string}){
+ const group=serviceCatalog.find(x=>x.slug===slug) ?? serviceCatalog[0];
+ return <><Header/><main className={styles.page}><div className={styles.wrap}><div className={styles.crumb}><Link href="/">Home</Link><span>•</span><Link href="/services">Services</Link><span>•</span><b>{group.label}</b></div><section className={styles.hero}><span>{group.label} · LAWXYGEN</span><h1>Explore {group.label.toLowerCase()}.</h1><p>Browse the services in this category and open the detailed LAWXYGEN service page for the workflow, preparation checklist and expert path.</p></section><section className={styles.list}><div className={styles.listHead}><span>Service catalogue</span><strong>{group.services.length} services</strong></div><div className={styles.grid}>{group.services.map((s,i)=><Link href={serviceHref(group.slug,s)} key={s}><small>{String(i+1).padStart(2,'0')}</small><span>{s}</span><b>↗</b></Link>)}</div></section></div></main><Footer/></>;
 }

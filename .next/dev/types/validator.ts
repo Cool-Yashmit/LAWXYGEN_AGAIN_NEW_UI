@@ -1521,6 +1521,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/services/talk-ca/ca-consultation-u2013-accounting-and-taxation/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/ca-consultation-u2013-accounting-and-taxation">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-ca/ca-consultation-u2013-accounting-and-taxation/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/services/talk-ca/financial-statement-preparation/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/services/talk-ca/financial-statement-preparation">> = Specific
@@ -1908,6 +1917,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/services/talk-lawyer/family-law-u2013-divorce-alimony-child-custody/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/family-law-u2013-divorce-alimony-child-custody">> = Specific
+  const handler = {} as typeof import("../../../app/services/talk-lawyer/family-law-u2013-divorce-alimony-child-custody/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/services/talk-lawyer/labour-and-employment-disputes/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/services/talk-lawyer/labour-and-employment-disputes">> = Specific
@@ -2002,6 +2020,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 {
   type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/360-degree-protection-roc-compliance-accounting-legal">> = Specific
   const handler = {} as typeof import("../../../app/services/tax-compliance/360-degree-protection-roc-compliance-accounting-legal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/360-degree-protection-u2013-roc-compliance-accounting-legal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/360-degree-protection-u2013-roc-compliance-accounting-legal">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/360-degree-protection-u2013-roc-compliance-accounting-legal/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -2416,6 +2443,24 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 {
   type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-return-itr-filing-individuals">> = Specific
   const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-return-itr-filing-individuals/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-return-itr-filing-u2013-businesses/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-return-itr-filing-u2013-businesses">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-return-itr-filing-u2013-businesses/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/tax-compliance/income-tax-return-itr-filing-u2013-individuals/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/tax-compliance/income-tax-return-itr-filing-u2013-individuals">> = Specific
+  const handler = {} as typeof import("../../../app/services/tax-compliance/income-tax-return-itr-filing-u2013-individuals/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

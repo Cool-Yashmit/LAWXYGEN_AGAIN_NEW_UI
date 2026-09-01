@@ -18,7 +18,6 @@ import {
   useState,
 } from "react";
 import { serviceCatalog } from "@/data/serviceCatalog";
-import { categoryHref, serviceHref } from "@/lib/serviceRoutes";
 
 export function ServiceShowcase() {
   const lenis = useLenis();
@@ -167,6 +166,14 @@ export function ServiceShowcase() {
     });
   };
 
+  const openServices = (query = "") => {
+    window.dispatchEvent(
+      new CustomEvent("lawxygen:open-services", {
+        detail: { query },
+      })
+    );
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -289,9 +296,10 @@ export function ServiceShowcase() {
 
                 <div className="v5-service-links">
                   {activeGroup.services.slice(0, 6).map((service, index) => (
-                    <motion.a
-                      href={serviceHref(activeGroup.slug, service)}
+                    <motion.button
+                      type="button"
                       key={service}
+                      onClick={() => openServices(service)}
                       initial={
                         reduceMotion
                           ? { opacity: 0 }
@@ -307,20 +315,21 @@ export function ServiceShowcase() {
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <strong>{service}</strong>
                       <b>↗</b>
-                    </motion.a>
+                    </motion.button>
                   ))}
                 </div>
 
-                <motion.a
-                  href={categoryHref(activeGroup.slug)}
+                <motion.button
+                  type="button"
                   className="v5-all-services"
+                  onClick={() => openServices()}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: reduceMotion ? 0 : 0.32, duration: 0.38 }}
                 >
                   Browse all services
                   <span>↗</span>
-                </motion.a>
+                </motion.button>
               </motion.div>
             </AnimatePresence>
           </div>

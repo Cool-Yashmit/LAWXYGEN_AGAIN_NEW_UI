@@ -1,2 +1,5 @@
-{"timestamp":"00:00:03.431","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:13:15.351","source":"Server","level":"LOG","message":"✓ Compiled in 455ms"}
+{"timestamp":"00:00:17.764","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:35:01.390","source":"Server","level":"LOG","message":"✓ Compiled in 1421ms"}
+{"timestamp":"00:35:07.943","source":"Server","level":"LOG","message":"✓ Compiled in 1269ms"}
+{"timestamp":"00:35:07.945","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:43:56.542","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}

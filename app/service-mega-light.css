@@ -234,12 +234,3 @@
     height: calc(100% - 106px);
   }
 }
-
-.v3-mega-heading a {
-  display: inline-flex;
-  margin-top: 10px;
-  color: var(--mega-accent);
-  font-size: 10px;
-  font-weight: 720;
-  letter-spacing: .02em;
-}

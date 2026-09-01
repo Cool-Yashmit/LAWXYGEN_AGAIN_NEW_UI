@@ -214,7 +214,7 @@
   gap: 0 34px;
 }
 
-.v7-services .v5-service-links a {
+.v7-services .v5-service-links button {
   position: relative;
   width: 100%;
   min-height: 65px;
@@ -233,7 +233,7 @@
   overflow: hidden;
 }
 
-.v7-services .v5-service-links a::after {
+.v7-services .v5-service-links button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -244,12 +244,12 @@
   transition: right .34s cubic-bezier(.22,1,.36,1);
 }
 
-.v7-services .v5-service-links a:hover::after,
-.v7-services .v5-service-links a:focus-visible::after {
+.v7-services .v5-service-links button:hover::after,
+.v7-services .v5-service-links button:focus-visible::after {
   right: 0;
 }
 
-.v7-services .v5-service-links a > span {
+.v7-services .v5-service-links button > span {
   color: var(--service-color);
   font-size: 12px;
   line-height: 1;
@@ -264,8 +264,8 @@
   transition: color .25s ease, transform .25s ease;
 }
 
-.v7-services .v5-service-links a:hover strong,
-.v7-services .v5-service-links a:focus-visible strong {
+.v7-services .v5-service-links button:hover strong,
+.v7-services .v5-service-links button:focus-visible strong {
   color: #09294f;
   transform: translateX(3px);
 }
@@ -276,8 +276,8 @@
   transition: transform .25s ease;
 }
 
-.v7-services .v5-service-links a:hover b,
-.v7-services .v5-service-links a:focus-visible b {
+.v7-services .v5-service-links button:hover b,
+.v7-services .v5-service-links button:focus-visible b {
   transform: translate(2px, -2px);
 }
 
@@ -391,7 +391,7 @@
     font-size: 14.5px;
   }
 
-  .v7-services .v5-service-links a > span {
+  .v7-services .v5-service-links button > span {
     font-size: 12.5px;
   }
 }
@@ -446,12 +446,12 @@
     font-size: clamp(48px, 14vw, 65px);
   }
 
-  .v7-services .v5-service-links a {
+  .v7-services .v5-service-links button {
     min-height: 52px;
     grid-template-columns: 32px 1fr auto;
   }
 
-  .v7-services .v5-service-links a > span {
+  .v7-services .v5-service-links button > span {
     font-size: 10.5px;
   }
 

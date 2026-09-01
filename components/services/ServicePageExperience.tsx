@@ -1,163 +1,170 @@
-"use client";
-
-import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { serviceHref } from "@/lib/serviceRoutes";
-import { getServiceContent } from "./servicePageContent";
-import styles from "./ServicePageShell.module.css";
+import type { CSSProperties } from "react";
+import { serviceCatalog } from "@/data/serviceCatalog";
+import styles from "./ServicePageExperience.module.css";
 
-type Props = {
-  title: string;
+type ServiceProps = {
   category: string;
   categorySlug: string;
-  related: string[];
-  theme: number;
   accent: string;
+  title: string;
+  serviceSlug: string;
+  pageIndex: number;
 };
 
-const themes = [
-  { bg: "#f5f9ff", panel: "#edf5ff", soft: "#dcebff", ink: "#0b2a4a", accent: "#2f7cf6" },
-  { bg: "#f5fbf9", panel: "#eaf8f3", soft: "#d3f1e5", ink: "#10382f", accent: "#16a47b" },
-  { bg: "#f8f6ff", panel: "#f0ebff", soft: "#e2d9ff", ink: "#2a205e", accent: "#7958ee" },
-  { bg: "#fffaf4", panel: "#fff1dc", soft: "#ffe4bd", ink: "#4c2f0e", accent: "#df8d1e" },
-  { bg: "#fff7f8", panel: "#ffecef", soft: "#ffdce5", ink: "#541e2b", accent: "#d85877" },
-  { bg: "#f3fbff", panel: "#e6f7ff", soft: "#d3effc", ink: "#103b52", accent: "#1b9ac7" },
-];
+type Mode = "editorial" | "timeline" | "split" | "grid" | "spotlight" | "tool";
 
-const layouts = ["split", "editorial", "rail", "timeline", "cards", "catalog"] as const;
-const indexItems = ["Overview", "Eligibility", "Expert tutorial", "Benefits", "Documents", "Process", "Pricing", "Related", "Expert help", "FAQs"];
+const modeNames: Mode[] = ["editorial", "timeline", "split", "grid", "spotlight", "tool"];
 
-function jump(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+const serviceKeywords: Record<string, string> = {
+  "Registration": "setup and registration",
+  "Filing": "filing and compliance support",
+  "Application": "application support",
+  "Advisory": "expert advisory support",
+  "Consultation": "specialist consultation",
+  "Agreement": "document drafting and review",
+  "Drafting": "professional drafting",
+  "Calculator": "guided calculation",
+  "Search": "search and assessment",
+  "Renewal": "renewal support",
+  "Audit": "review and audit support",
+  "Certificate": "certificate and application support",
+  "License": "licence and regulatory support",
+  "Dispute": "dispute support",
+};
+
+function pickMode(title: string, pageIndex: number): Mode {
+  if (/Calculator|Finder|Tool$/i.test(title)) return "tool";
+  return modeNames[pageIndex % modeNames.length];
 }
 
-export function ServicePageExperience({ title, category, categorySlug, related, theme, accent }: Props) {
-  const visual = themes[theme % themes.length];
-  const layout = layouts[theme % layouts.length];
-  const content = useMemo(() => getServiceContent(title, category), [title, category]);
-  const [indexOpen, setIndexOpen] = useState(false);
-  const [faqOpen, setFaqOpen] = useState(0);
-  const [slide, setSlide] = useState(0);
+function describe(title: string, category: string) {
+  const key = Object.keys(serviceKeywords).find((k) => title.includes(k));
+  const serviceType = key ? serviceKeywords[key] : "structured professional support";
+  return `${title} is presented through a clear, guided LAWXYGEN workflow with practical next actions, document readiness, process visibility and expert support. The service experience is designed around ${serviceType} for ${category.toLowerCase()} needs.`;
+}
 
-  useEffect(() => {
-    const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");
-      });
-    }, { threshold: 0.12 });
-    nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
-  }, []);
+function servicePath(categorySlug: string, service: string) {
+  return `/services/${categorySlug}/${service.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
 
-  useEffect(() => {
-    const timer = window.setInterval(() => setSlide((value) => (value + 1) % Math.max(related.length, 1)), 3400);
-    return () => window.clearInterval(timer);
-  }, [related.length]);
+function related(categorySlug: string, title: string) {
+  const group = serviceCatalog.find((g) => g.slug === categorySlug) ?? serviceCatalog[0];
+  return group.services.filter((item) => item !== title).slice(0, 5).map((item) => ({
+    title: item,
+    href: servicePath(categorySlug, item),
+  }));
+}
 
-  const palette = { "--page-bg": visual.bg, "--page-panel": visual.panel, "--page-soft": visual.soft, "--page-ink": visual.ink, "--page-accent": accent || visual.accent } as React.CSSProperties;
+function Documents({ title, category }: { title: string; category: string }) {
+  const docs = [
+    "Identity and contact details relevant to the applicant or business",
+    "Service-specific supporting records and existing registrations, where applicable",
+    "Address or establishment proof when the service requires it",
+    "Authorisations, declarations or signed documents requested during the workflow",
+  ];
+  return <div className={styles.documentGrid}>{docs.map((item, i) => <div className={styles.document} key={item}><span>0{i + 1}</span><strong>{item}</strong><p>Final requirements can vary by case and are confirmed before filing or submission.</p></div>)}</div>;
+}
 
-  return (
-    <div className={`${styles.experience} ${styles[`layout-${layout}`]}`} style={palette}>
-      <div className={styles.pageTop} data-reveal>
-        <div className={styles.crumbs}><Link href="/services">Services</Link><span>/</span><Link href={`/services/${categorySlug}`}>{category}</Link><span>/</span><strong>{title}</strong></div>
-        <button className={styles.indexToggle} type="button" onClick={() => setIndexOpen((value) => !value)}>{indexOpen ? "Hide index" : "Page index"}<span>{indexOpen ? "−" : "+"}</span></button>
-      </div>
+function FAQ({ title }: { title: string }) {
+  const qs = [
+    `What is ${title}?`,
+    `Who should consider ${title}?`,
+    `What information should I keep ready?`,
+    `Can LAWXYGEN help me through the complete process?`,
+  ];
+  return <div className={styles.faqList}>{qs.map((q) => <details key={q}><summary>{q}</summary><p>LAWXYGEN can explain the workflow, help organise the required information and route you to the appropriate professional support where the service requires a filing, review or consultation.</p></details>)}</div>;
+}
 
-      {indexOpen && (
-        <nav className={styles.indexBar} data-reveal aria-label="Service page sections">
-          {indexItems.map((item, index) => {
-            const ids = ["overview", "eligibility", "tutorial", "benefits", "documents", "process", "pricing", "related", "help", "faq"];
-            return <button key={item} type="button" onClick={() => jump(ids[index])}><b>{String(index + 1).padStart(2, "0")}</b>{item}</button>;
-          })}
-        </nav>
-      )}
+export function ServicePageExperience({ category, categorySlug, accent, title, serviceSlug, pageIndex }: ServiceProps) {
+  const mode = pickMode(title, pageIndex);
+  const relatedItems = related(categorySlug, title);
+  const intro = describe(title, category);
+  const steps = [
+    "Understand the requirement and confirm the appropriate service path",
+    "Collect the relevant information and supporting documents",
+    "Prepare, review and validate the submission-ready details",
+    "Complete the applicable filing, registration, drafting or review step",
+    "Track follow-up actions and keep the next compliance or legal step visible",
+  ];
 
-      <section className={styles.hero} data-reveal>
-        <div className={styles.heroOrb} />
+  return <main className={`${styles.page} ${styles[mode]}`} style={{ ["--accent" as string]: accent } as CSSProperties}>
+    <div className={styles.ambient} />
+    <div className={styles.shell}>
+      <div className={styles.breadcrumb}><Link href="/">Home</Link><span>/</span><Link href="/services">Services</Link><span>/</span><span>{category}</span></div>
+
+      <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <div className={styles.kicker}>{category.toUpperCase()} · LAWXYGEN</div>
+          <div className={styles.eyebrow}><span style={{ background: accent }} />{category}</div>
           <h1>{title}</h1>
-          <p>{content.hero}</p>
+          <p>{intro}</p>
           <div className={styles.heroActions}>
-            <Link className={styles.primary} href="/login">Start this service <span>↗</span></Link>
-            <button className={styles.secondary} type="button" onClick={() => jump("help")}>Talk to an expert <span>→</span></button>
+            <Link className={styles.primary} href="#start">Get started <span>↗</span></Link>
+            <Link className={styles.secondary} href="#process">See process</Link>
           </div>
-          <div className={styles.heroFacts}>{content.highlights.map((item) => <span key={item}>{item}</span>)}</div>
+          <div className={styles.metaLine}><span>LAWXYGEN SERVICE DESK</span><span>Online support</span><span>Expert assistance available</span></div>
         </div>
-        <aside className={styles.startPanel}>
-          <div className={styles.panelEyebrow}>SERVICE WORKSPACE <span>01</span></div>
-          <h2>Keep the next action visible.</h2>
-          <div className={styles.statusList}>
-            <div><span>Service</span><strong>{title}</strong></div>
-            <div><span>Category</span><strong>{category}</strong></div>
-            <div><span>Status</span><strong>Ready to start</strong></div>
-            <div><span>Next</span><strong>Review requirements</strong></div>
-          </div>
-          <Link href="/login" className={styles.panelButton}>Log in / Sign up <span>→</span></Link>
-        </aside>
-      </section>
-
-      <section id="overview" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>01 · OVERVIEW</div>
-        <div className={styles.sectionGrid}>
-          <h2>{title}<br /><em>at a glance.</em></h2>
-          <div><p className={styles.largeCopy}>{content.overview}</p><div className={styles.signalRow}>{content.highlights.map((item, i) => <div key={item}><span>0{i + 1}</span><strong>{item}</strong></div>)}</div></div>
+        <div className={styles.workspace} id="start">
+          <div className={styles.workspaceTop}><span>REGISTER + DASHBOARD</span><b>{String((pageIndex % 99) + 1).padStart(2, "0")}</b></div>
+          <h2>Your next action, organised.</h2>
+          <div className={styles.status}><span>Service</span><strong>{title}</strong></div>
+          <div className={styles.status}><span>Status</span><strong>Ready to start</strong></div>
+          <div className={styles.status}><span>Next</span><strong>Review requirements</strong></div>
+          <button className={styles.deskButton}>Login to track service</button>
         </div>
       </section>
 
-      <section id="eligibility" className={`${styles.section} ${styles.alt}`} data-reveal>
-        <div className={styles.sectionLabel}>02 · ELIGIBILITY</div>
-        <div className={styles.eligibilityWrap}>
-          <div><h2>Know before<br />you begin.</h2><p>Use this checklist as a practical starting point. Service-specific conditions should be confirmed for the actual case.</p></div>
-          <div className={styles.eligibilityList}>{content.eligibility.map((item, i) => <div key={item}><b>{String(i + 1).padStart(2, "0")}</b><span>{item}</span></div>)}</div>
-        </div>
+      <nav className={styles.pageNav} aria-label="Service sections"><a href="#overview">Overview</a><a href="#eligibility">Eligibility</a><a href="#documents">Documents</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+
+      <section className={styles.section} id="overview">
+        <div className={styles.sectionLead}><span>01</span><h2>What this service covers</h2></div>
+        <div className={styles.overviewGrid}><div><p className={styles.lead}>{intro}</p><p>Good service delivery starts with clarity. This page keeps the most important information close to the action so users can understand the requirement before they begin.</p></div><div className={styles.factPanel}><div><span>Category</span><strong>{category}</strong></div><div><span>Service mode</span><strong>Online workflow</strong></div><div><span>Support</span><strong>Expert assisted</strong></div></div></div>
       </section>
 
-      <section id="tutorial" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>03 · EXPERT TUTORIAL</div>
-        <div className={styles.videoGrid}>
-          <div className={styles.videoPanel}><div className={styles.play}>▶</div><div><span>LAWXYGEN EXPERT</span><strong>See how the service works.</strong></div></div>
-          <div><h2>Understand the journey before you start.</h2><p>{content.tutorial}</p><button className={styles.textAction} type="button" onClick={() => jump("help")}>Talk to an expert <span>→</span></button></div>
-        </div>
+      <section className={styles.section} id="eligibility">
+        <div className={styles.sectionLead}><span>02</span><h2>Eligibility & readiness</h2></div>
+        <div className={styles.checkList}>{[
+          "The request matches the service scope",
+          "Applicant or business details are available",
+          "Required records can be provided when requested",
+          "Any required authorisation is available before submission",
+        ].map((x, i) => <div className={styles.check} key={x}><span>{i < 9 ? `0${i + 1}` : i + 1}</span><strong>{x}</strong><em>Check</em></div>)}</div>
       </section>
 
-      <section id="benefits" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>04 · BENEFITS</div>
-        <div className={styles.sectionHead}><h2>Why this service matters.</h2><p>Short, useful reasons to choose a guided route.</p></div>
-        <div className={styles.benefitGrid}>{content.benefits.map(([titleText, body], i) => <article key={titleText}><span>{String(i + 1).padStart(2, "0")}</span><h3>{titleText}</h3><p>{body}</p></article>)}</div>
+      <section className={styles.section}>
+        <div className={styles.sectionLead}><span>03</span><h2>Expert walkthrough</h2></div>
+        <div className={styles.videoCard}><div className={styles.videoGlyph}>▶</div><div><span>LAWXYGEN EXPERT TUTORIAL</span><h3>Understand the service before you submit.</h3><p>A dedicated tutorial slot is ready for a future LAWXYGEN expert video covering this service from the first question to the final next step.</p></div><button type="button">Watch when available</button></div>
       </section>
 
-      <section id="documents" className={`${styles.section} ${styles.alt}`} data-reveal>
-        <div className={styles.sectionLabel}>05 · DOCUMENTS</div>
-        <div className={styles.sectionHead}><h2>Prepare what matters.</h2><p>Keep the essential records grouped so the next stage stays straightforward.</p></div>
-        <div className={styles.documentGrid}>{content.documents.map(([group, items]) => <article key={group}><span>{group}</span><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div>
+      <section className={styles.section}>
+        <div className={styles.sectionLead}><span>04</span><h2>Benefits at a glance</h2></div>
+        <div className={styles.benefitGrid}>{[
+          ["Clarity","Know what happens next"],["Structure","Keep information in the right order"],["Support","Get routed to the right professional"],["Visibility","See progress and pending actions"],
+        ].map(([a,b],i)=><article className={styles.benefit} key={a}><span>0{i+1}</span><strong>{a}</strong><p>{b}</p></article>)}</div>
       </section>
 
-      <section id="process" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>06 · PROCESS</div>
-        <div className={styles.processGrid}><div><h2>From first step<br />to next action.</h2><p>Every stage is kept visible so the user knows what happens next.</p></div><div className={styles.steps}>{content.process.map(([num, step]) => <div key={num}><span>{num}</span><strong>{step}</strong><i>↗</i></div>)}</div></div>
+      <section className={styles.section} id="documents">
+        <div className={styles.sectionLead}><span>05</span><h2>Documents & information</h2></div>
+        <Documents title={title} category={category}/>
       </section>
 
-      <section id="pricing" className={`${styles.section} ${styles.alt}`} data-reveal>
-        <div className={styles.sectionLabel}>07 · PRICING</div>
-        <div className={styles.pricingCard}><div><span>LAWXYGEN SERVICE</span><h2>Clear scope.<br />Clear next step.</h2><p>{content.pricing}</p></div><Link href="/login" className={styles.primary}>Get started <span>↗</span></Link></div>
+      <section className={styles.section} id="process">
+        <div className={styles.sectionLead}><span>06</span><h2>How the process works</h2></div>
+        <div className={styles.process}>{steps.map((step,i)=><div className={styles.processStep} key={step}><span>{String(i+1).padStart(2,"0")}</span><div><strong>{step}</strong><p>LAWXYGEN keeps this stage focused so the user can complete one clear action at a time.</p></div></div>)}</div>
       </section>
 
-      <section id="related" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>08 · RELATED SERVICES</div>
-        <div className={styles.sectionHead}><h2>Continue where you need to.</h2><p>Related LAWXYGEN routes, kept one click away.</p></div>
-        <div className={styles.relatedViewport}><div className={styles.relatedTrack} style={{ transform: `translateX(-${slide * 33.3333}%)` }}>{[...related, ...related, ...related].map((service, i) => <Link href={serviceHref(categorySlug, service)} key={`${service}-${i}`}><small>{String((i % Math.max(related.length, 1)) + 1).padStart(2, "0")}</small><strong>{service}</strong><span>↗</span></Link>)}</div></div>
+      <section className={styles.section}>
+        <div className={styles.sectionLead}><span>07</span><h2>Pricing & next step</h2></div>
+        <div className={styles.pricing}><div><span>LAWXYGEN SERVICE</span><h3>Simple start. Clear scope.</h3><p>Final professional fees, government charges and case-specific costs should be confirmed against the approved LAWXYGEN pricing for this service.</p></div><div className={styles.priceCard}><small>Quote</small><strong>Request pricing</strong><Link href="#start">Get a service quote ↗</Link></div></div>
       </section>
 
-      <section id="help" className={styles.section} data-reveal>
-        <div className={styles.helpPanel}><div><span>09 · TALK TO AN EXPERT</span><h2>Need a clearer next step?</h2><p>{content.help}</p></div><Link href="/services/talk-lawyer/online-lawyer-consultation" className={styles.lightButton}>Talk to an expert <span>→</span></Link></div>
-      </section>
+      <section className={styles.relatedSection}><div><span className={styles.kicker}>EXPLORE MORE</span><h2>Related LAWXYGEN services</h2></div><div className={styles.relatedRow}>{relatedItems.map((item)=><Link key={item.title} href={item.href}><span>{item.title}</span><b>↗</b></Link>)}</div></section>
 
-      <section id="faq" className={styles.section} data-reveal>
-        <div className={styles.sectionLabel}>10 · FAQs</div>
-        <div className={styles.faqGrid}><h2>Common questions,<br />answered clearly.</h2><div className={styles.faqList}>{content.faqs.map(([q, a], i) => <article key={q}><button type="button" onClick={() => setFaqOpen(faqOpen === i ? -1 : i)}><span>{q}</span><b>{faqOpen === i ? "−" : "+"}</b></button>{faqOpen === i && <p>{a}</p>}</article>)}</div></div>
-      </section>
+      <section className={styles.help}><div><span className={styles.kicker}>NEED HELP?</span><h2>Talk to the right expert before you proceed.</h2><p>Tell us what you need and LAWXYGEN can guide you to the appropriate service or professional.</p></div><Link className={styles.primary} href="/services/talk-lawyer">Talk to an expert <span>↗</span></Link></section>
+
+      <section className={styles.section} id="faq"><div className={styles.sectionLead}><span>08</span><h2>Frequently asked questions</h2></div><FAQ title={title}/></section>
+
+      <footer className={styles.serviceFooter}><div><strong>LAWXYGEN</strong><span>Legal, tax & business services</span></div><Link href="/services">Browse all services ↗</Link></footer>
     </div>
-  );
+  </main>;
 }

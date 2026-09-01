@@ -8,7 +8,7 @@ import {
 } from "react";
 
 import { serviceCatalog } from "@/data/serviceCatalog";
-import { categoryHref, serviceHref } from "@/lib/serviceRoutes";
+import { serviceHref } from "@/lib/serviceRoutes";
 
 type Props = {
   open: boolean;
@@ -46,7 +46,7 @@ export function ServiceMegaMenu({
           service,
           category: category.label,
           accent: category.accent,
-          groupSlug: category.slug,
+          categorySlug: category.slug,
         }))
     );
   }, [query]);
@@ -152,10 +152,9 @@ export function ServiceMegaMenu({
           >
             {results.map((item) => (
               <a
-                href={serviceHref(item.groupSlug, item.service)}
+                href={serviceHref(item.categorySlug, item.service)}
                 className="v3-search-result"
                 key={`${item.category}-${item.service}`}
-                onClick={onClose}
               >
                 <i
                   style={{
@@ -224,13 +223,12 @@ export function ServiceMegaMenu({
               <div className="v3-mega-heading">
                 <span>Category</span>
                 <h2>{group.label}</h2>
-                <a href={categoryHref(group.slug)} onClick={onClose}>View category ↗</a>
               </div>
 
               <div className="v3-mega-service-list">
                 {group.services.map(
                   (service, index) => (
-                    <a href={serviceHref(group.slug, service)} key={service} onClick={onClose}>
+                    <a href={serviceHref(group.slug, service)} key={service}>
                       <span>
                         {String(index + 1).padStart(
                           2,

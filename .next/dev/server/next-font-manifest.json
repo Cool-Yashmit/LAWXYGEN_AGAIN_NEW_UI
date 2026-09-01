@@ -1,24 +1,40 @@
 {
   "app": {
     "[project]/app/page": [
-      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
-      "static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2"
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ],
-    "[project]/app/services/specialized-services/hra-calculator/page": [
-      "static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.1gsd1jahc5dg_.woff2"
+    "[project]/app/services/business-setup/one-person-company-opc-registration/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ],
-    "[project]/app/services/specialized-services/page": [
-      "static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.1gsd1jahc5dg_.woff2"
+    "[project]/app/services/business-setup/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ],
-    "[project]/app/services/tax-compliance/gst-amendment-modification/page": [
-      "static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2",
-      "static/media/1b99372b3eaef0c8-s.p.1gsd1jahc5dg_.woff2"
+    "[project]/app/services/business-setup/private-limited-company-registration/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/specialized-services/gst-calculator/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/tax-compliance/gst-cancellation/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/tax-compliance/gst-return-filing-gstr-1-gstr-3b-gstr-9/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ],
     "[project]/app/services/tax-compliance/new-gst-registration/page": [
-      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
-      "static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2"
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
+    ],
+    "[project]/app/services/tax-compliance/page": [
+      "static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2"
     ]
   },
   "appUsingSizeAdjust": true,

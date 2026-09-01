@@ -1,10 +1,4 @@
+import type { Metadata } from "next";
 import { ServiceCategoryPage } from "@/components/services/ServiceCategoryPage";
-
-export const metadata = {
-  title: "Certifications | LAWXYGEN",
-  description: "Browse LAWXYGEN Certifications services.",
-};
-
-export default function Page() {
-  return <ServiceCategoryPage groupSlug="certifications" />;
-}
+export const metadata: Metadata={title:"Certifications | LAWXYGEN",description:"Explore Certifications services on LAWXYGEN."};
+export default function Page(){return <ServiceCategoryPage slug="certifications"/>;}

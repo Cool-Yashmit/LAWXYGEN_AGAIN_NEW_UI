@@ -25,7 +25,7 @@ export function Footer() {
             <span>↗</span>
           </a>
 
-          <a href="#experts">
+          <a href="/services/talk-lawyer">
             Talk to an Expert
             <span>→</span>
           </a>
@@ -54,19 +54,19 @@ export function Footer() {
           <div>
             <span>Business</span>
 
-            <a href="#services">
+            <a href="/services">
               Company Registration
             </a>
 
-            <a href="#services">
+            <a href="/services">
               LLP Registration
             </a>
 
-            <a href="#services">
+            <a href="/services">
               Startup Services
             </a>
 
-            <a href="#services">
+            <a href="/services">
               Business Licences
             </a>
           </div>
@@ -74,19 +74,19 @@ export function Footer() {
           <div>
             <span>Compliance</span>
 
-            <a href="#compliance">
+            <a href="/services/tax-compliance">
               GST
             </a>
 
-            <a href="#compliance">
+            <a href="/services/tax-compliance">
               Income Tax
             </a>
 
-            <a href="#compliance">
+            <a href="/services/tax-compliance">
               ROC Compliance
             </a>
 
-            <a href="#compliance">
+            <a href="/services/tax-compliance">
               Payroll
             </a>
           </div>
@@ -94,19 +94,19 @@ export function Footer() {
           <div>
             <span>Experts</span>
 
-            <a href="#experts">
+            <a href="/services/talk-lawyer">
               Talk to a Lawyer
             </a>
 
-            <a href="#experts">
+            <a href="/services/talk-lawyer">
               Talk to a CA
             </a>
 
-            <a href="#experts">
+            <a href="/services/talk-lawyer">
               Talk to a CS
             </a>
 
-            <a href="#experts">
+            <a href="/services/talk-lawyer">
               Talk to an IP Lawyer
             </a>
           </div>
@@ -114,13 +114,13 @@ export function Footer() {
           <div>
             <span>LAWXYGEN</span>
 
-            <a href="#">About</a>
+            <a href="/">About</a>
 
-            <a href="#">Contact</a>
+            <a href="/">Contact</a>
 
-            <a href="#">Privacy</a>
+            <a href="/">Privacy</a>
 
-            <a href="#">Terms</a>
+            <a href="/">Terms</a>
           </div>
         </div>
       </div>
@@ -129,23 +129,23 @@ export function Footer() {
         <span>POPULAR SERVICES</span>
 
         <div>
-          <a href="#services">
+          <a href="/services">
             Private Limited Company
           </a>
 
-          <a href="#services">
+          <a href="/services">
             GST Registration
           </a>
 
-          <a href="#services">
+          <a href="/services">
             Trademark
           </a>
 
-          <a href="#services">
+          <a href="/services">
             FSSAI
           </a>
 
-          <a href="#services">
+          <a href="/services">
             Legal Documentation
           </a>
         </div>

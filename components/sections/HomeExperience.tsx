@@ -13,7 +13,6 @@ import {
 
 export function HomeExperience() {
   const journeyRef = useRef<HTMLElement>(null);
-  const complianceRef = useRef<HTMLElement>(null);
   const protectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress: journeyProgress } =
@@ -21,13 +20,6 @@ export function HomeExperience() {
       target: journeyRef,
       offset: ["start end", "end start"],
     });
-
-  const {
-    scrollYProgress: complianceProgress,
-  } = useScroll({
-    target: complianceRef,
-    offset: ["start start", "end end"],
-  });
 
   const {
     scrollYProgress: protectionProgress,
@@ -40,30 +32,6 @@ export function HomeExperience() {
     journeyProgress,
     [0, 1],
     ["7%", "-10%"]
-  );
-
-  const complianceOne = useTransform(
-    complianceProgress,
-    [0, 1],
-    [18, -18]
-  );
-
-  const complianceTwo = useTransform(
-    complianceProgress,
-    [0, 1],
-    [34, -8]
-  );
-
-  const complianceThree = useTransform(
-    complianceProgress,
-    [0, 1],
-    [50, 4]
-  );
-
-  const complianceFour = useTransform(
-    complianceProgress,
-    [0, 1],
-    [65, 15]
   );
 
   const protectionX = useTransform(
@@ -156,103 +124,6 @@ export function HomeExperience() {
               <p>{item.text}</p>
             </motion.article>
           ))}
-        </div>
-      </section>
-
-      <section
-        ref={complianceRef}
-        id="compliance"
-        className="v5-compliance"
-      >
-        <div className="v5-compliance-sticky">
-          <div className="v5-compliance-copy">
-            <span>TAX & COMPLIANCE</span>
-
-            <h2>
-              Stay ready for
-              <br />
-              what comes next.
-            </h2>
-
-            <p>
-              GST, income tax, corporate filings,
-              payroll and recurring compliance can
-              stay organised without becoming
-              overwhelming.
-            </p>
-
-            <a href="#services">
-              Explore compliance
-              <b>↗</b>
-            </a>
-          </div>
-
-          <div className="v5-compliance-stack">
-            <motion.article
-              style={{ y: complianceOne }}
-            >
-              <span>GST</span>
-
-              <strong>
-                Registration & Returns
-              </strong>
-
-              <p>
-                Registration · Filing ·
-                Reconciliation
-              </p>
-
-              <b>↗</b>
-            </motion.article>
-
-            <motion.article
-              style={{ y: complianceTwo }}
-            >
-              <span>ROC</span>
-
-              <strong>
-                Corporate Compliance
-              </strong>
-
-              <p>
-                Annual filings · Corporate changes
-              </p>
-
-              <b>↗</b>
-            </motion.article>
-
-            <motion.article
-              style={{ y: complianceThree }}
-            >
-              <span>TAX</span>
-
-              <strong>
-                Income Tax & TDS
-              </strong>
-
-              <p>
-                Returns · TDS · Tax support
-              </p>
-
-              <b>↗</b>
-            </motion.article>
-
-            <motion.article
-              style={{ y: complianceFour }}
-            >
-              <span>PAYROLL</span>
-
-              <strong>
-                Employee Compliance
-              </strong>
-
-              <p>
-                PF · ESI · Payroll
-              </p>
-
-              <b>↗</b>
-            </motion.article>
-          </div>
         </div>
       </section>
 
@@ -544,7 +415,7 @@ export function HomeExperience() {
         </h2>
 
         <div>
-          <a href="/services">
+          <a href="#services">
             Explore Services
             <b>↗</b>
           </a>

@@ -1,10 +1,4 @@
+import type { Metadata } from "next";
 import { ServiceCategoryPage } from "@/components/services/ServiceCategoryPage";
-
-export const metadata = {
-  title: "Tax & Compliance | LAWXYGEN",
-  description: "Browse LAWXYGEN Tax & Compliance services.",
-};
-
-export default function Page() {
-  return <ServiceCategoryPage groupSlug="tax-compliance" />;
-}
+export const metadata: Metadata={title:"Tax & Compliance | LAWXYGEN",description:"Explore Tax & Compliance services on LAWXYGEN."};
+export default function Page(){return <ServiceCategoryPage slug="tax-compliance"/>;}
